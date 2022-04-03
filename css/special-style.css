@@ -1,0 +1,18 @@
+.marquee {
+    overflow: hidden; 
+}
+.marquee-content {
+    display: flex;
+}
+.marquee-item {
+    flex: 0 0 16vw;
+    margin: 0 1vw;
+}
+.marquee-item img{
+    display: block;
+    width: 100%;
+}
+@keyframes marqueeScrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translatex(-144vw); }
+}
