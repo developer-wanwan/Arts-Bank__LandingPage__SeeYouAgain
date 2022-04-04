@@ -44,7 +44,6 @@ span.paragraph{
 .gradient-text{
     background: linear-gradient(90deg, #E61779 20%, #EC641B);
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
 }
 
 .long-topic-circle{
@@ -107,6 +106,19 @@ button.to-top i, button.to-bottom i{
     font-size: 40px;
 }
 
+img.original-bird{
+    position: absolute; 
+    left: 16em; top: 17em;
+}
+img.first-bird{
+    position: absolute; 
+    right: 16em; bottom: 10em;
+}
+img.second-bird{
+    position: absolute; 
+    left: 17em
+}
+
 /*Header*/
 header .navbar{
     background: #FFF;
@@ -124,6 +136,7 @@ header .navbar-expand-lg .navbar-nav {
     flex-direction: row;
     align-items: center;
 }
+
 header .navbar-brand{
     padding-top: 0;
     padding-bottom: 0;
@@ -131,6 +144,51 @@ header .navbar-brand{
 header .navbar img.logo{
     width: 207px;
 }
+
+header .navbar-toggler{
+    background: #36357E;
+    border-radius: 100%;
+    width: 50px; height: 50px;
+    font-size: 0; position: relative;
+}
+header .navbar-toggler:focus {
+    box-shadow: none;
+}
+header .navbar-toggler .navbar-toggler-icon {
+    width: 25px; height: 3px;
+    background: #FFF;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    /*Inside-Alignment*/
+    display: flex; justify-content: center;
+    align-items: center;
+}
+header .navbar-toggler .navbar-toggler-icon::before,
+header .navbar-toggler .navbar-toggler-icon::after{
+    content: ''; position: absolute; height: 3px; 
+    background: #FFF; border-radius: 5px;
+    transition: all .5s ease-in-out;
+    transition-delay: .1s;
+}
+header .navbar-toggler .navbar-toggler-icon::before{
+    width: 25px; transform: translateY(-9.5px);
+}
+header .navbar-toggler .navbar-toggler-icon::after{
+    width: 14px; transform: translate(5px, 9.5px);
+}
+
+/* Navbar-Toggler-Icon-Animation */
+header .navbar-toggler.open .navbar-toggler-icon{
+    background: none; transition: all .2s ease;
+}
+header .navbar-toggler.open .navbar-toggler-icon::before{
+    height: 4px; transform: rotate(-45deg);
+}
+header .navbar-toggler.open .navbar-toggler-icon::after{
+    width: 25px; height: 4px;
+    transform: rotate(45deg);
+}
+
 header .navbar .nav-item{
     background: #fad3d6;
     height: 21px; 
@@ -140,23 +198,25 @@ header .navbar a.nav-link{
     font-family: 'cwTeXKai', serif;
     letter-spacing: 0px; cursor: pointer;
     position: relative; top: -5px;
-    padding-top: 0;
+    padding-top: 0; color: #6D3541;
 }
 header .navbar .nav-item:first-child a.nav-link{
     padding-right: 5em;
     padding-left: 0;
-    color: #4C2A47;
 }
 header .navbar .nav-item:nth-child(2) a.nav-link{
     padding-right: .4em;
-    color: #6D3541;
 }
-header .navbar .nav-link.active::after{
+header .navbar a.nav-link.active{
+    color: #4C2A47 !important;
+}
+header .navbar a.nav-link.active::after{
     content: ''; display: block;
     height: 3px; position: relative;
     background: #4C2A47;
     border-radius: 50px;
-    animation: underlineAnimation .5s ease-in;
+    transition: .5s all ease-in-out;
+    animation: underlineAnimation .3s ease-in;
 }
 @keyframes underlineAnimation{
     from{
@@ -212,6 +272,9 @@ main.section-1 .text-frame h1{
     margin-bottom: .75em;
     font-size: 34px;
 }
+main.section-1 .text-frame h1 span.deep-red{
+    padding: 0 5px;
+}
 main.section-1 .text-frame p{
     padding: 0 4.25em; 
     line-height: 32px;
@@ -234,9 +297,10 @@ main.section-1 .closing-details .topic{
 }
 main.section-1 .closing-details .topic h3{
     color: #FFF;
-    font-size: 26px;
+    font-size: 24px;
     letter-spacing: .5px;
-    margin-bottom: 0;
+    margin-bottom: 0; margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 main.section-1 .closing-details p.date-and-time{
     font-size: 50px;
@@ -285,7 +349,7 @@ main.section-1 #slide2 .methods .step.large{
 main.section-1 #slide2 .methods .step::after{
     content: '\f054'; font-size: 40px;
     font-family: FontAwesome;
-    color: #4C2A47; 
+    color: #4C2A47;
     /*Alignment*/
     float: right; transform: translate(42px,-215px);
 }
@@ -492,13 +556,15 @@ main.section-2 #slide2{
     background-size: cover;
     height: 1980px;
 }
-
 main.section-2 .strength{
     margin-top: 6em;
 }
 main.section-2 .strength h2{
     color: #FFF;
     margin-bottom: 2em;
+}
+main.section-2 .strength h2 span.paragraph{
+    display: inline;
 }
 main.section-2 .strength .school-info{
     margin-top: 3em;
@@ -548,10 +614,7 @@ main.section-2 .activity-memories{
     margin-top: 12em;
 }
 main.section-2 .activity-memories .marquee{
-    margin-top: 3.75em;
-}
-main.section-2 .activity-memories .marquee .marquee-content{
-    animation: marqueeScrolling 20s linear infinite;
+    margin-top: 3.1em;
 }
 
 main.section-2 #slide2 footer{
@@ -562,7 +625,7 @@ main.section-2 #slide2 footer > *{
     display: inline-block;
 }
 main.section-2 #slide2 footer article{
-    width: 530px; margin-top: 8em;
+    width: 530px; margin-top: 6em;
 }
 main.section-2 #slide2 footer img{
     float: right;
@@ -593,14 +656,327 @@ footer#sole-footer .navigation{
 }
 footer#sole-footer .navigation .item{
     display: inline-block; height: 26px;
-    border-right: 2px solid #BEBEBE;
+    border-right: 2px solid #7B3D48;
     margin: 1.8em 0; padding: 0 2.35em;
 }
 footer#sole-footer .navigation .item:nth-last-child(1){
     border-right: none;
 }
 footer#sole-footer .navigation .item a{
-    color: #6D3541; text-decoration: none;
+    color: #7B3D48; text-decoration: none;
     font-family: 'cwTeXKai', serif; font-size: 25px;
     position: relative; top: -5.25px;
+}
+
+/*RWD*/
+@media only screen and (max-width: 550px){
+
+    .topic span.bigger{
+        font-size: 40px;
+    }
+    main.section-1 #slide1,
+    main.section-2 #slide1{
+        background-image: url('../img/arts_bank_mobile_wallppaper_1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 230vh !important;
+    }
+    img.first-bird{
+        width: 50px;
+        right: 3em;
+    }
+    main.section-1 #slide1 .car,
+    main.section-2 #slide1 .car{
+        top: 29.25em !important; 
+    }
+    main.section-1 #slide2 .methods .step{
+        display: none;
+    }
+
+    main.section-2 .strength h2 span.paragraph{
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 580px){
+
+    footer#sole-footer .navigation .item {
+        padding: 0 1.25em; margin: 1.2em 0;
+        height: 15px;
+    }
+    footer#sole-footer .navigation .item a{
+        font-size: 15px; 
+    }
+
+}
+
+@media only screen and (min-width:551px) and (max-width: 600px){
+
+    .topic span.bigger{
+        font-size: 45px;
+    }
+    main.section-1 #slide1, 
+    main.section-2 #slide1{
+        background-image: url('../img/arts_bank_mobile_wallppaper_1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 230vh !important;
+    }
+
+    main.section-1 #slide2{
+        background-image: url(../img/arts_bank_mobile_wallppaper_2.1.jpg);
+        background-repeat: repeat-y;
+        background-size: cover;
+        height: 400vh;
+    }
+
+    main.section-1 #slide2 .methods .step{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1250px){
+    
+    main.section-1 #slide2 .methods .step {
+        margin: 1.7em 1.7em;
+        height: 290px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 930px) {
+
+    main.section-1 #slide2 .methods .step h3{
+        margin-top: 15px;
+        font-size: 23px;
+    }
+    main.section-1 #slide2 .methods .step .item p,
+    main.section-1 #slide2 .methods .step .item a{
+        font-size: 15px;
+    }
+    main.section-1 #slide2 .methods .step .item {
+        height: 100px;
+    }
+    main.section-1 #slide2 .methods .step.large .item {
+        height: auto;
+    }
+    
+}
+
+@media only screen and (min-width: 750px) and (max-width: 930px){
+    
+    main.section-1 #slide2 .methods .step {
+        width: 250px !important;
+    }
+    main.section-1 #slide2 .methods .step.large {
+        width: 350px !important;
+    }
+
+}
+
+@media only screen and (min-width: 931px) and (max-width: 1250px){
+    
+    main.section-1 #slide2 .methods{
+        margin: 0 0em;
+    }
+    main.section-1 #slide2 .methods .step {
+        width: 350px !important;
+    }
+    main.section-1 #slide2 .methods .step.large {
+        width: 450px !important;
+    }
+    main.section-1 #slide2 .methods .step h3{
+        margin-top: 10px;
+        font-size: 25px;
+    }
+    main.section-1 #slide2 .methods .step .item p,
+    main.section-1 #slide2 .methods .step .item a{
+        font-size: 20px;
+    }
+    main.section-1 #slide2 .methods .step .item {
+        height: 100px;
+    }
+    main.section-1 #slide2 .methods .step.large .item {
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width: 1100px){
+
+    main.section-2 .strength .school-info .each-info{
+        display: block; margin: auto;
+        margin-top: 3em; margin-bottom: 3em;
+    }
+    main.section-2 .strength .school-info .amount span{
+        font-size: 75px; letter-spacing: 5.5px;
+    }
+    main.section-2 .strength .school-info p.target{
+        font-size: 22px; letter-spacing: 0;
+    }
+    
+}
+
+@media only screen and (max-width: 990px){
+
+    button.to-top, button.to-bottom{
+        width: 40px; height: 40px;
+        position: absolute; left: 0; right: 0;
+        margin-left: auto; margin-right: auto;
+    }
+    button.to-bottom i{
+        font-size: 25px;
+    }
+
+    header .navbar{
+        padding-bottom: 0 !important;
+    }
+    header .navbar-nav{
+        flex-direction: column !important;
+        margin-top: 2.25em;
+    }
+    header .navbar img.logo{
+        margin-top: -0.2em;
+    }
+    header nav .container-fluid{
+        width: 100%; 
+        background: #FFF;
+    }
+    header .navbar .nav-item{
+        background: #FFF;
+        height: 50px; margin: .5em 0;
+    }
+    header .navbar .nav-item a.nav-link{
+        width: 203px;
+        text-align: center;
+    }
+    header .navbar .nav-item:first-child a.nav-link {
+        padding-right: 0;
+        padding-left: 0; 
+    }
+    header .navbar span.small-house-icon img{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1150px){
+
+    img.original-bird{
+        width: 50px;
+        left: 2em; top: 28em;
+    }
+    main.section-1 #slide1 .top-topic,
+    main.section-2 #slide1 .top-topic{
+        position: absolute; left: 0; right: 0;
+        margin-left: auto; margin-right: auto;
+        margin-top: 1em; 
+    }
+    main.section-1 #slide1 .car,
+    main.section-2 #slide1 .car{
+        width: 80%;
+        right: 2em;
+        top: 28em;
+    }
+    main.section-1 .text-frame,
+    main.section-2 .text-frame{
+        width: 90%;
+    }
+    main.section-1 button.to-bottom,
+    main.section-2 button.to-bottom{
+        position: absolute; left: 0; right: 0;
+        margin-left: auto; margin-right: auto;
+        margin-top: 17em;
+    }
+    main.section-1 #slide1 .contents,
+    main.section-2 #slide1 .contents{
+        top: 49em;
+    }
+    main.section-1 #slide1 h1,
+    main.section-2 #slide1 .text-frame h2{
+        font-size: 25px; padding: 0 .6em;
+    }
+    main.section-1 #slide1 h1 span.paragraph{
+        display: inline;
+    }
+    main.section-1 .text-frame h1 span.deep-red{
+        padding: 0 2.5px;
+    }
+    main.section-1 .text-frame p,
+    main.section-2 .text-frame p {
+        padding: 1em 1.25em;
+        line-height: 23px;
+        text-align: justify;
+        margin-bottom: 0;
+        font-size: 15px;
+    }
+    main.section-1 .closing-details,
+    main.section-2 .strength{
+        margin-top: 2.25em;
+    }
+    main.section-1 .closing-details .each-detail img{
+        width: 155px;
+    }
+    main.section-1 .closing-details .each-detail{
+        margin: 1.5em 1em;
+    }
+    main.section-1 .closing-details .topic{
+        width: 255px; margin: auto;
+        padding: 10px 0; margin-top: -8px;
+    }
+    main.section-1 .closing-details .topic h3{
+        font-size: 20px; margin-top: 5px;
+    }
+    main.section-1 .closing-details p.date-and-time {
+        font-size: 35px;
+        margin-top: 5px;
+    }
+    main.section-1 .closing-details p.date-and-time span.time{
+        font-size: 20px;
+    }
+
+    main.section-1 #slide2 .contents {
+        position: relative;
+        top: 4.25em;
+    }
+    main.section-1 #slide2 .vip-invition h2{
+        font-size: 30px; line-height: 35px;
+    }
+
+    footer#sole-footer .navigation .item{
+        border-right: 1px solid #7B3D48;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1600px) {
+
+    main.section-1 #slide1, 
+    main.section-2 #slide1{
+        height: 180vh;
+    }
+
+    img.first-bird{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1600px) {
+
+    main.section-1 #slide1, 
+    main.section-2 #slide1{
+        height: 180vh;
+    }
+
+}
+
+@media only screen and (min-width:530px) and (max-width: 1600px) {
+
+    img.first-bird{
+        display: none;
+    }
+
 }
