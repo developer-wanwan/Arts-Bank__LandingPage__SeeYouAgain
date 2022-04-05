@@ -44,11 +44,6 @@ mark{
     color: #4C2A47;
 }
 
-.gradient-text{
-    background: linear-gradient(90deg, #E61779 20%, #EC641B);
-    -webkit-text-fill-color: transparent;
-}
-
 .long-topic-circle{
     background: url(../img/arts_banks_title_long_bg.png) no-repeat; 
     padding-bottom: .85em; padding-right: 1.12em; padding-left: .5em;
@@ -218,7 +213,6 @@ header .navbar a.nav-link.active::after{
     height: 3px; position: relative;
     background: #4C2A47;
     border-radius: 50px;
-    transition: .5s all ease-in-out;
     animation: underlineAnimation .3s ease-in;
 }
 @keyframes underlineAnimation{
@@ -811,44 +805,6 @@ footer#sole-footer .navigation .item a{
 
 @media only screen and (max-width: 685px){
 
-    .long-topic-circle {
-        width: 325px;
-        display: block;
-        margin: auto;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 1.2em;
-        top: 7.5px;
-    }
-    .long-topic-circle span{
-        vertical-align: middle;
-        position: relative;
-        top: 8px;
-    }
-    .short-topic-circle span{
-        vertical-align: middle;
-        position: relative;
-        top: 15px; left: 0;
-    }
-    .short-topic-circle {
-        width: 185px;
-        display: block;
-        margin: auto;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 1.5em;
-        top: 7.5px;
-    }
-    .eye-topic-frame {
-        background: url(../img/arts_bank_eye_icon_mobile.png) no-repeat;
-        background-position: none;
-        display: block; width: 350px;
-        padding-left: 0; padding-bottom: .5em;
-    }
-    .eye-topic-frame span{
-        left: 2.25px; top: -0.8em;
-    }
-
     main.section-1 #slide2 .carousel {
         display: block;
     }
@@ -1017,6 +973,44 @@ footer#sole-footer .navigation .item a{
 }
 
 @media only screen and (max-width: 1150px){
+
+    .long-topic-circle {
+        width: 325px;
+        display: block;
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 1.2em;
+        top: 7.5px;
+    }
+    .long-topic-circle span{
+        vertical-align: middle;
+        position: relative;
+        top: 8px;
+    }
+    .short-topic-circle span{
+        vertical-align: middle;
+        position: relative;
+        top: 15px; left: 0;
+    }
+    .short-topic-circle {
+        width: 185px;
+        display: block;
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 1.5em;
+        top: 7.5px;
+    }
+    .eye-topic-frame {
+        background: url(../img/arts_bank_eye_icon_mobile.png) no-repeat;
+        background-position: none;
+        display: block; width: 350px;
+        padding-left: 0; padding-bottom: .5em;
+    }
+    .eye-topic-frame span{
+        left: 2.25px; top: -0.8em;
+    }
 
     img.original-bird{
         width: 50px;
