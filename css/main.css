@@ -214,6 +214,7 @@ header .navbar a.nav-link.active::after{
     background: #4C2A47;
     border-radius: 50px;
     animation: underlineAnimation .3s ease-in;
+    -webkit-animation: underlineAnimation .3s ease-in;
 }
 @keyframes underlineAnimation{
     from{
@@ -716,6 +717,16 @@ footer#sole-footer .navigation .item a{
         margin-top: 2em !important;
     }
 
+    main.section-1 #slide1,
+    main.section-2 #slide1{
+        height: 300vh !important;
+    }
+
+    main.section-1 #slide2,
+    main.section-2 #slide2{
+        height: 300vh !important;
+    }
+
     main.section-2 .origin-of-love .inside-contents .video-cover {
         position: absolute;
         top: 20.5%;
@@ -740,7 +751,7 @@ footer#sole-footer .navigation .item a{
         background-image: url(../img/arts_bank_mobile_wallppaper_1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 230vh !important;
+        height: 230vh;
     }
 
     main.section-1 #slide2{
@@ -986,7 +997,7 @@ footer#sole-footer .navigation .item a{
     .long-topic-circle span{
         vertical-align: middle;
         position: relative;
-        top: 8px;
+        top: 11px;
     }
     .short-topic-circle span{
         vertical-align: middle;
