@@ -40,6 +40,9 @@ span.paragraph{
 .deep-purple{
     color: #6D3541;
 }
+mark{
+    color: #4C2A47;
+}
 
 .gradient-text{
     background: linear-gradient(90deg, #E61779 20%, #EC641B);
@@ -332,6 +335,10 @@ main.section-1 #slide2 .vip-invition h2{
 main.section-1 #slide2 .vip-invition p{
     line-height: 0.75;
 }
+main.section-1 #slide2 .vip-invition mark,
+main.section-1 #slide2 p.remind mark{
+    background: none;
+}
 main.section-1 #slide2 .methods{
     margin-top: 4em;
 }
@@ -346,6 +353,9 @@ main.section-1 #slide2 .methods .step{
 main.section-1 #slide2 .methods .step.large{
     width: 320px;
 }
+main.section-1 #slide2 .methods .carousel-cell.large{
+    width: 259px;
+}
 main.section-1 #slide2 .methods .step::after{
     content: '\f054'; font-size: 40px;
     font-family: FontAwesome;
@@ -353,36 +363,52 @@ main.section-1 #slide2 .methods .step::after{
     /*Alignment*/
     float: right; transform: translate(42px,-215px);
 }
-main.section-1 #slide2 .methods .step img{
+main.section-1 #slide2 .methods .step img,
+main.section-1 #slide2 .methods .carousel-cell img{
     display: block; margin: auto;
     width: 63px;
 }
-main.section-1 #slide2 .methods .step.large img{
+main.section-1 #slide2 .methods .step.large img,
+main.section-1 #slide2 .methods .carousel-cell.large img{
     width: 77px;
 } 
 main.section-1 #slide2 .methods .step.large::after{
     content: none;
 }
-main.section-1 #slide2 .methods .step h3{
+main.section-1 #slide2 .methods .step h3,
+main.section-1 #slide2 .methods .carousel-cell h3{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-main.section-1 #slide2 .methods .step .item{
+main.section-1 #slide2 .methods .step .item,
+main.section-1 #slide2 .methods .carousel-cell .item{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 150px;
 }
-main.section-1 #slide2 .methods .step .item p{
+main.section-1 #slide2 .methods .carousel-cell.large .item{
+    height: 125px;
+}
+main.section-1 #slide2 .methods .step .item p,
+main.section-1 #slide2 .methods .carousel-cell p{
     line-height: .8; letter-spacing: 0;
 }
-main.section-1 #slide2 .methods .step.large a{
+main.section-1 #slide2 .methods .step.large a,
+main.section-1 #slide2 .methods .carousel-cell.large a{
     font-size: 18px;
     font-family: 'cwTeXKai', serif;
     letter-spacing: 1.25px; 
     position: relative; top: -0.5em;
 }
-main.section-1 #slide2 .methods .step span.number{
+main.section-1 #slide2 .methods .carousel-cell.large a{
+    font-size: 15px;
+    font-family: 'cwTeXKai', serif;
+    letter-spacing: 1.25px; 
+    position: relative; top: -0.75em;
+}
+main.section-1 #slide2 .methods .step span.number,
+main.section-1 #slide2 .methods .carousel-cell span.number{
     color: #FFF;
     font-size: 30px;
     padding: .2em .6em;
@@ -391,11 +417,15 @@ main.section-1 #slide2 .methods .step span.number{
     position: relative; top: -0.65em;
 }
 main.section-1 #slide2 .methods .step:nth-child(1) span.number,
-main.section-1 #slide2 .methods .step:nth-child(2) span.number{
+main.section-1 #slide2 .methods .step:nth-child(2) span.number,
+main.section-1 #slide2 .methods .carousel-cell:nth-child(1) span.number,
+main.section-1 #slide2 .methods .carousel-cell:nth-child(2) span.number{
     background: #E61779;
 }
 main.section-1 #slide2 .methods .step:nth-child(3) span.number,
-main.section-1 #slide2 .methods .step:nth-child(4) span.number{
+main.section-1 #slide2 .methods .step:nth-child(4) span.number,
+main.section-1 #slide2 .methods .carousel-cell:nth-child(3) span.number,
+main.section-1 #slide2 .methods .carousel-cell:nth-child(4) span.number{
     background: #EC641B;
 }
 main.section-1 #slide2 .remind{
@@ -473,7 +503,7 @@ main.section-1 #slide2 .cultural-coin .section-2 .frame .remind p{
     line-height: 1.75;
 }
 main.section-1 #slide2 .cultural-coin .section-2 .frame mark{
-    background: #fad3d6; padding: 0; color: #4C2A47;
+    background: #fad3d6; padding: 0; 
 }
 main.section-1 #slide2 .cultural-coin .section-2 .frame img.money-icon{
     width: 84px; position: relative; float: right;
@@ -484,6 +514,10 @@ main.section-1 #slide2 footer .reward{
 }
 main.section-1 #slide2 footer article{
     margin-top: 5em;
+}
+main.section-1 #slide2 footer article mark,
+main.section-2 #slide2 footer article mark{
+    background: none;
 }
 main.section-1 #slide2 footer article p{
     line-height: .85;
@@ -618,20 +652,29 @@ main.section-2 .activity-memories .marquee{
 }
 
 main.section-2 #slide2 footer{
-    margin-top: 20em !important; 
-    width: 1050px; margin: auto;
+    width: 1050px; margin-top: 19em; 
+    margin-left: auto; margin-right: auto;
 }
-main.section-2 #slide2 footer > *{
+main.section-2 #slide2 footer h2{
+    position: relative; top: -2em;
+}
+main.section-2 #slide2 footer h2 .long-topic-circle span{
+    left: 8.25px;
+}
+main.section-2 #slide2 footer .contents{
+    top: 1em;
+}
+main.section-2 #slide2 footer .contents > *{
     display: inline-block;
 }
 main.section-2 #slide2 footer article{
-    width: 530px; margin-top: 6em;
+    width: 530px; margin-top: 2em;
 }
 main.section-2 #slide2 footer img{
-    float: right;
+    float: right; margin-top: -3em;
 }
 main.section-2 #slide2 footer mark{
-    background: #fad3d6; padding: 0; color: #4C2A47;
+    background: #fad3d6; padding: 0; 
 }
 
 main.section-2 button.to-top{
@@ -669,6 +712,30 @@ footer#sole-footer .navigation .item a{
 }
 
 /*RWD*/
+@media only screen and (max-width: 395px){
+
+    main.section-1 #slide2 footer article{
+        margin-top: 3em;
+    }
+
+    button.to-top{
+        margin-top: 2em !important;
+    }
+
+    main.section-2 .origin-of-love .inside-contents .video-cover {
+        position: absolute;
+        top: 20.5%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    main.section-2 #slide2 footer{
+        margin-top: 14em !important;
+    }
+
+}
 @media only screen and (max-width: 550px){
 
     .topic span.bigger{
@@ -676,25 +743,41 @@ footer#sole-footer .navigation .item a{
     }
     main.section-1 #slide1,
     main.section-2 #slide1{
-        background-image: url('../img/arts_bank_mobile_wallppaper_1.jpg');
+        background-image: url(../img/arts_bank_mobile_wallppaper_1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: 230vh !important;
     }
+
+    main.section-1 #slide2{
+        background-image: url(../img/arts_bank_mobile_wallppaper_2.1.jpg);
+        background-repeat: repeat-y;
+        background-size: cover;
+        height: 240vh;
+    }
+
+    main.section-2 #slide2{
+        background-image: url(../img/arts_bank_mobile_wallppaper_2.2.jpg);
+        background-repeat: repeat-y;
+        background-size: cover;
+        height: 250vh;
+    }
+
     img.first-bird{
         width: 50px;
         right: 3em;
     }
-    main.section-1 #slide1 .car,
-    main.section-2 #slide1 .car{
-        top: 29.25em !important; 
-    }
+
     main.section-1 #slide2 .methods .step{
         display: none;
     }
 
     main.section-2 .strength h2 span.paragraph{
         display: block;
+    }
+
+    main.section-2 #slide2 footer{
+        margin-top: 20em;
     }
 
 }
@@ -718,23 +801,86 @@ footer#sole-footer .navigation .item a{
     }
     main.section-1 #slide1, 
     main.section-2 #slide1{
-        background-image: url('../img/arts_bank_mobile_wallppaper_1.jpg');
+        background-image: url(../img/arts_bank_mobile_wallppaper_1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: 230vh !important;
     }
 
-    main.section-1 #slide2{
-        background-image: url(../img/arts_bank_mobile_wallppaper_2.1.jpg);
-        background-repeat: repeat-y;
-        background-size: cover;
-        height: 400vh;
+}
+
+@media only screen and (max-width: 685px){
+
+    .long-topic-circle {
+        width: 325px;
+        display: block;
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 1.2em;
+        top: 7.5px;
+    }
+    .long-topic-circle span{
+        vertical-align: middle;
+        position: relative;
+        top: 8px;
+    }
+    .short-topic-circle span{
+        vertical-align: middle;
+        position: relative;
+        top: 15px; left: 0;
+    }
+    .short-topic-circle {
+        width: 185px;
+        display: block;
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 1.5em;
+        top: 7.5px;
+    }
+    .eye-topic-frame {
+        background: url(../img/arts_bank_eye_icon_mobile.png) no-repeat;
+        background-position: none;
+        display: block; width: 350px;
+        padding-left: 0; padding-bottom: .5em;
+    }
+    .eye-topic-frame span{
+        left: 2.25px; top: -0.8em;
     }
 
+    main.section-1 #slide2 .carousel {
+        display: block;
+    }
     main.section-1 #slide2 .methods .step{
         display: none;
     }
+    main.section-1 #slide2 .methods{
+        margin-top: 2em;
+    }
+    main.section-1 #slide2 .methods .carousel-cell p{
+        font-size: 15px;
+    }
 
+    main.section-2 .origin-of-love .inside-contents article p {
+        padding: 0 0.85em;
+        margin-top: .75em;
+        line-height: 1.5;
+    }
+    main.section-2 .origin-of-love .inside-contents article h2{
+        margin-top: 0;
+    }
+    main.section-2 .origin-of-love .inside-contents .video-cover{
+        position: absolute;
+        top: 22%; left: 0; right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    main.section-2 .activity-memories {
+        margin-top: 20em;
+    }
+    
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1250px){
@@ -822,12 +968,15 @@ footer#sole-footer .navigation .item a{
 @media only screen and (max-width: 990px){
 
     button.to-top, button.to-bottom{
-        width: 40px; height: 40px;
+        width: 53px; height: 53px;
         position: absolute; left: 0; right: 0;
         margin-left: auto; margin-right: auto;
     }
-    button.to-bottom i{
+    button.to-bottom i, button.to-top i{
         font-size: 25px;
+    }
+    button.to-top span{
+        font-size: 15px;
     }
 
     header .navbar{
@@ -860,6 +1009,11 @@ footer#sole-footer .navigation .item a{
         display: none;
     }
 
+    main.section-1 #slide2 .vip-invition mark,
+    main.section-1 #slide2 p.remind mark{
+        background: #fad3d6; padding: 0; 
+    }
+
 }
 
 @media only screen and (max-width: 1150px){
@@ -867,6 +1021,9 @@ footer#sole-footer .navigation .item a{
     img.original-bird{
         width: 50px;
         left: 2em; top: 28em;
+    }
+    img.second-bird{
+        display: none;
     }
     main.section-1 #slide1 .top-topic,
     main.section-2 #slide1 .top-topic{
@@ -888,7 +1045,7 @@ footer#sole-footer .navigation .item a{
     main.section-2 button.to-bottom{
         position: absolute; left: 0; right: 0;
         margin-left: auto; margin-right: auto;
-        margin-top: 17em;
+        top: 44em;
     }
     main.section-1 #slide1 .contents,
     main.section-2 #slide1 .contents{
@@ -944,9 +1101,130 @@ footer#sole-footer .navigation .item a{
     main.section-1 #slide2 .vip-invition h2{
         font-size: 30px; line-height: 35px;
     }
+    main.section-1 #slide2 .vip-invition p{
+        font-size: 15px; display: inline;
+        padding: 0;
+    }
+    main.section-1 #slide2 .remind{
+        font-size: 15px;
+    }
+    main.section-1 #slide2 .vip-invition .remind,
+    main.section-1 #slide2 .remind{
+        margin: 0 .9em;
+    }
+
+    main.section-1 #slide2 .reward{
+        width: 327px;
+        font-size: 18px;
+        padding: .7em 0;
+    }
+    main.section-1 #slide2 .reward span{
+        display: block;
+    }
+    main.section-1 #slide2 .reward.icons-1::before {
+        margin-left: -8em; margin-top: 0;
+    }
+    main.section-1 #slide2 .reward.icons-1::after {
+        width: 55px;
+        margin-top: -0.55em;
+        margin-left: 5em;
+    }
+
+    main.section-1 #slide2 .cultural-coin{
+        width: 100%; margin-top: 5.5em;
+    }    
+    main.section-1 #slide2 .cultural-coin .section-1 img, 
+    main.section-1 #slide2 .cultural-coin .section-2 img{
+        width: 58px;
+    }
+    main.section-1 #slide2 .cultural-coin .section-1 img{
+        margin-right: 1.5em;
+    }
+    main.section-1 #slide2 .cultural-coin .section-1 .frame {
+        background: url(../img/arts_bank_text_frame_mobile_1.png);
+        width: 200px; height: 70px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 2.5px;
+    }
+    main.section-1 #slide2 .cultural-coin .section-2 .frame {
+        background: url(../img/arts_bank_text_frame_mobile_2.png);
+        width: 275px; height: 410px;
+    }
+    main.section-1 #slide2 .cultural-coin .section-1 .frame h2{
+        font-size: 21px; top: -1px;
+    }
+    main.section-1 #slide2 .cultural-coin .section-2 .frame mark{
+        background: none;
+    }
+    main.section-1 #slide2 .cultural-coin .section-2 .frame p.main-content{
+        font-size: 15px;
+    }
+    main.section-1 #slide2 .cultural-coin .section-2 .frame .remind p{
+        font-size: 13px;
+    }
+    main.section-1 #slide2 .cultural-coin .section-2 .frame img.money-icon {
+        width: 63px; left: -1em; top: 1.3em;
+    }
+
+    main.section-1 #slide2 footer .reward{
+        width: 327px; height: 65px;
+    }
+    main.section-1 #slide2 footer article{
+        margin-left: 1em; margin-right: 1em;
+    }
+    main.section-1 #slide2 footer article mark{
+        background: #fad3d6; padding: 0;
+    }
+    main.section-1 #slide2 footer article p{
+        font-size: 18px; line-height: 1.75;
+        margin-bottom: 0;
+    }
+    main.section-2 #slide2 footer article p{
+        font-size: 18px; line-height: 1.4;
+        margin-bottom: 0;
+    }
+
+    main.section-2 .origin-of-love .inside-contents article{
+        width: 100%;
+    }
+    main.section-2 .origin-of-love .inside-contents > *{
+        margin: 0 0; padding: 0 1em;
+    }
+    main.section-2 .origin-of-love .video-cover img{
+        width: 340px;
+    }
+    main.section-2 .origin-of-love .inside-contents article p{
+        font-size: 15px;
+    }
 
     footer#sole-footer .navigation .item{
         border-right: 1px solid #7B3D48;
+    }
+
+}
+
+@media only screen and (max-width: 1250px){
+    
+    main.section-2 #slide2 footer{
+        width: 100%; margin: auto;
+    }
+    main.section-2 #slide2 footer h2{
+        top: 0;
+    }
+    main.section-2 #slide2 footer article{
+        padding: 0 1em; 
+        margin-top: 0;
+        width: 100%;
+    }
+    main.section-2 #slide2 footer article p{
+        margin: 1.4em 0;
+    }
+    main.section-2 #slide2 footer img{
+        width: 304px; float: none;
+        margin: auto; display: block !important;
     }
 
 }
@@ -973,7 +1251,7 @@ footer#sole-footer .navigation .item a{
 
 }
 
-@media only screen and (min-width:530px) and (max-width: 1600px) {
+@media only screen and (min-width:500px) and (max-width: 1600px) {
 
     img.first-bird{
         display: none;

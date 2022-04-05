@@ -1,3 +1,47 @@
+/*Carousel*/
+.carousel {
+  display: none;
+}
+.carousel-cell {
+  width: 190px; height: 297px;
+  background: #FFF; margin-right: 30px;
+  border-radius: 40px; opacity: .5;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px, rgba(0, 0, 0, 0.1) 0px 2px 2px, 
+                rgba(0, 0, 0, 0.1) 0px 4px 4px, rgba(0, 0, 0, 0.1) 0px 8px 8px, 
+                rgba(0, 0, 0, 0.1) 0px 16px 16px;
+}
+.carousel-cell.is-selected {
+  opacity: 1;
+}
+.flickity-enabled.is-draggable .flickity-viewport {
+  height: 355px !important; padding-top: 2em
+}
+.flickity-page-dots {
+  position: static !important;
+  margin-top: -2.5em; margin-bottom: 2em !important; 
+}
+.flickity-button {
+  background: none !important;
+  color: #4C2A47 !important;
+}
+.flickity-button:disabled{
+  opacity: 1 !important; 
+  color: #8E8E8E !important;
+}
+.flickity-prev-next-button {
+  width: 55px !important;
+  height: 55px !important;
+}
+.flickity-prev-next-button .flickity-button-icon {
+  top: 70% !important;
+}
+.flickity-page-dots .dot{
+  background: #ED6A21 !important;
+}
+.flickity-page-dots .dot.is-selected{
+  background: #4C2A47 !important;
+}
+
 /*Marquee Animation*/
 :root {
   --marquee-width: 100%;
