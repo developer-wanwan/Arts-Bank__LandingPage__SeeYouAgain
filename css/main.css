@@ -64,7 +64,7 @@ mark{
     position: relative; left: 0; right: 0;
     margin-left: auto; margin-right: auto;
     padding-top: 5em; padding-bottom: 2em;
-    padding-left: 3em;
+    padding-left: 3em; 
 }
 
 .long-topic-circle span{
@@ -731,11 +731,6 @@ footer#sole-footer .navigation .item a{
         bottom: 5.5em;
     }
 
-    main.section-1 #slide1,
-    main.section-2 #slide1{
-        background-size: contain;
-        height: 1618px;
-    }
     main.section-1 #slide1 .car,
     main.section-2 #slide1 .car{
         top: 22em;
@@ -743,6 +738,12 @@ footer#sole-footer .navigation .item a{
     main.section-1 button.to-bottom,
     main.section-2 button.to-bottom{
         top: 34em;
+    }
+
+    main.section-1 #slide1,
+    main.section-2 #slide1{
+        background-size: contain;
+        height: 1618px;
     }
     main.section-1 #slide1 .contents,
     main.section-2 #slide1 .contents{
@@ -768,15 +769,6 @@ footer#sole-footer .navigation .item a{
     main.section-2 #slide2 .contents{
         top: 3.25em !important;
     }
-    main.section-2 .origin-of-love .inside-contents .video-cover {
-        position: absolute;
-        top: 20.5%;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
     main.section-2 .activity-memories{
         margin-top: 23em !important;
     }
@@ -791,6 +783,50 @@ footer#sole-footer .navigation .item a{
     }
 
 }
+
+@media only screen and (min-width: 401px) and (max-width: 900px){
+
+    main.section-1 #slide1 .car,
+    main.section-2 #slide1 .car{
+        top: 27em; 
+    }
+    main.section-1 button.to-bottom,
+    main.section-2 button.to-bottom{
+        top: 44em;
+    }
+    main.section-1 #slide1, 
+    main.section-2 #slide1{
+        background-position: 80%;
+    }
+    main.section-1 #slide1{
+        height: 1600px;
+    }
+    main.section-2 #slide1{
+        height: 1780px;
+    }
+    main.section-1 #slide1 .contents,
+    main.section-2 #slide1 .contents{
+        top: 48em;
+    }
+    main.section-1 #slide2,
+    main.section-2 #slide2{
+        background-position: 20%;
+    }
+    main.section-1 #slide2{
+        height: 2250px;
+    }
+    main.section-2 #slide2{
+        height: 2400px;
+    }
+    main.section-2 .activity-memories {
+        margin-top: 25em;
+    }
+    main.section-2 #slide2 footer{
+        margin-top: 14em;
+    }
+
+}
+
 @media only screen and (max-width: 550px){
 
     .topic span.bigger{
@@ -801,6 +837,9 @@ footer#sole-footer .navigation .item a{
         background-image: url(../img/arts_bank_mobile_wallppaper_1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    main.section-1 #slide1 h1 span.paragraph{
+        display: inline;
     }
 
     main.section-1 #slide2{
@@ -825,12 +864,36 @@ footer#sole-footer .navigation .item a{
         display: none;
     }
 
-    main.section-2 .strength h2 span.paragraph{
-        display: block;
+    main.section-2 #slide2 footer article{
+        padding: 0 1em; 
+        margin-top: 0;
+        width: 100%;
     }
 
-    main.section-2 #slide2 footer{
-        margin-top: 20em;
+}
+
+@media only screen and (min-width: 551px) and (max-width: 1150px){
+
+    main.section-2 #slide2 footer article{
+        margin-left: auto;
+        margin-right: auto;
+        display: block !important;
+    }
+
+}
+
+@media only screen and (min-width:578px) and (max-width: 1150px){
+
+    main.section-2 .origin-of-love .inside-contents article h2 {
+        font-size: 25px;
+    }
+
+}
+
+@media only screen and (min-width:551px) and (max-width: 600px){
+
+    .topic span.bigger{
+        font-size: 45px;
     }
 
 }
@@ -847,17 +910,14 @@ footer#sole-footer .navigation .item a{
 
 }
 
-@media only screen and (min-width:551px) and (max-width: 600px){
+@media only screen and (min-width: 830px) and (max-width: 930px){
 
-    .topic span.bigger{
-        font-size: 45px;
+    main.section-1 #slide1 .car, 
+    main.section-2 #slide1 .car{
+        top: 20.5em !important;
     }
-    main.section-1 #slide1, 
     main.section-2 #slide1{
-        background-image: url(../img/arts_bank_mobile_wallppaper_1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 230vh !important;
+        height: 1600px !important;
     }
 
 }
@@ -892,23 +952,16 @@ footer#sole-footer .navigation .item a{
         margin-right: auto;
         text-align: center;
     }
-    main.section-2 .activity-memories {
-        margin-top: 20em;
-    }
     
-}
-
-@media only screen and (min-width: 600px) and (max-width: 1250px){
-    
-    main.section-1 #slide2 .methods .step {
-        margin: 1.7em 1.7em;
-        height: 290px;
-    }
-
 }
 
 @media only screen and (min-width: 600px) and (max-width: 930px) {
 
+    main.section-1 #slide1 .car,
+    main.section-2 #slide1 .car{
+        width: 65% !important;
+        top: 23em !important;
+    }
     main.section-1 #slide2 .methods .step h3{
         margin-top: 15px;
         font-size: 23px;
@@ -923,7 +976,33 @@ footer#sole-footer .navigation .item a{
     main.section-1 #slide2 .methods .step.large .item {
         height: auto;
     }
+    main.section-1 #slide2 .methods .step::after {
+        transform: translate(140px,-42px);
+    }
+    main.section-1 #slide2 .methods .step:nth-child(3):after {
+        transform: translate(140px,-39px);
+    }
     
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1250px){
+    
+    main.section-1 #slide2 .methods .step {
+        margin: 1.7em 1.7em;
+        height: 300px;
+    }
+
+}
+
+@media only screen and (min-width: 686px) and (max-width: 749px){
+
+    main.section-1 #slide2 .methods .step::after{
+        transform: translate(127px,-42px) !important;
+    }
+    main.section-1 #slide2 .methods .step:nth-child(3):after{
+        transform: translate(127px,-39px) !important;
+    }
+
 }
 
 @media only screen and (min-width: 750px) and (max-width: 930px){
@@ -947,6 +1026,12 @@ footer#sole-footer .navigation .item a{
     }
     main.section-1 #slide2 .methods .step.large {
         width: 450px !important;
+    }
+    main.section-1 #slide2 .methods .step::after {
+        transform: translate(193px,-45px);
+    }
+    main.section-1 #slide2 .methods .step:nth-child(3):after {
+        transform: translate(193px,-43px);
     }
     main.section-1 #slide2 .methods .step h3{
         margin-top: 10px;
@@ -1019,9 +1104,10 @@ footer#sole-footer .navigation .item a{
 
 @media only screen and (max-width: 1100px){
 
+    main.section-1 .closing-details .each-detail,
     main.section-2 .strength .school-info .each-info{
         display: block; margin: auto;
-        margin-top: 3em; margin-bottom: 3em;
+        margin-top: 2em; margin-bottom: 2em;
     }
     main.section-2 .strength .school-info .amount span{
         font-size: 75px; letter-spacing: 5.5px;
@@ -1074,7 +1160,7 @@ footer#sole-footer .navigation .item a{
 
     img.original-bird{
         width: 50px;
-        left: 2em; top: 21em;
+        left: 2em; top: 25em;
     }
     img.second-bird{
         display: none;
@@ -1105,9 +1191,6 @@ footer#sole-footer .navigation .item a{
     main.section-1 #slide1 h1,
     main.section-2 #slide1 .text-frame h2{
         font-size: 25px; padding: 0 .6em;
-    }
-    main.section-1 #slide1 h1 span.paragraph{
-        display: inline;
     }
     main.section-1 .text-frame h1 span.deep-red{
         padding: 0 2.5px;
@@ -1182,6 +1265,15 @@ footer#sole-footer .navigation .item a{
         margin-left: 5em;
     }
 
+    main.section-2 .origin-of-love .inside-contents .video-cover {
+        position: absolute;
+        top: 20.5%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
     main.section-1 #slide2 .cultural-coin{
         width: 100%; margin-top: 5.5em;
     }    
@@ -1261,15 +1353,10 @@ footer#sole-footer .navigation .item a{
 @media only screen and (max-width: 1250px){
     
     main.section-2 #slide2 footer{
-        width: 100%; margin: auto;
+        width: 100%; margin-left: auto; margin-right: auto;
     }
     main.section-2 #slide2 footer h2{
         top: 0;
-    }
-    main.section-2 #slide2 footer article{
-        padding: 0 1em; 
-        margin-top: 0;
-        width: 100%;
     }
     main.section-2 #slide2 footer article p{
         margin: 1.4em 0;
@@ -1277,28 +1364,6 @@ footer#sole-footer .navigation .item a{
     main.section-2 #slide2 footer img{
         width: 304px; float: none;
         margin: auto; display: block !important;
-    }
-
-}
-
-@media only screen and (min-width: 601px) and (max-width: 1600px) {
-
-    main.section-1 #slide1, 
-    main.section-2 #slide1{
-        height: 180vh;
-    }
-
-    img.first-bird{
-        display: none;
-    }
-
-}
-
-@media only screen and (min-width: 601px) and (max-width: 1600px) {
-
-    main.section-1 #slide1, 
-    main.section-2 #slide1{
-        height: 180vh;
     }
 
 }
