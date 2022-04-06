@@ -789,7 +789,90 @@ footer#sole-footer .navigation .item a{
 
 }
 
-@media only screen and (min-width: 401px) and (max-width: 930px){
+@media only screen and (min-width: 401px) and (max-width: 500px){
+   
+    img.car{
+        top: 22em !important;
+    }
+    main.section-1 button.to-bottom, 
+    main.section-2 button.to-bottom{
+        top: 42.5em;
+    }
+    main.section-1 button.to-bottom, 
+    main.section-2 button.to-bottom{
+        top: 35.5em;
+    }
+    main.section-1 #slide1, main.section-2 #slide1{
+        height: 1700px;
+    }
+    main.section-1 #slide2{
+        height: 2200px;
+    }
+    main.section-2 #slide2{
+        height: 2550px;
+    }
+    main.section-1 #slide1 .contents{
+        top: 47em;
+    }
+    main.section-2 #slide2 .contents{
+        top: 10em;
+    }
+    main.section-2 .origin-of-love .inside-contents .video-cover{
+        top: 18% !important;
+    }
+    main.section-2 .activity-memories{
+        margin-top: 28em;
+    }
+    main.section-2 .activity-memories .marquee{
+        margin-top: 15em;
+    }
+    main.section-2 #slide2 footer{
+        margin-top: 17em;
+    }
+
+}
+
+@media only screen and (min-width: 501px) and (max-width: 550px){
+   
+    img.original-bird{
+        top: 27.5em;
+    }
+    img.car{
+        top: 25.5em !important;
+    }
+    main.section-1 button.to-bottom, 
+    main.section-2 button.to-bottom{
+        top: 42.5em;
+    }
+    main.section-1 #slide1, main.section-2 #slide1{
+        height: 1650px;
+    }
+    main.section-1 #slide2{
+        height: 2000px;
+    }
+    main.section-2 #slide2{
+        height: 2700px;
+    }
+    main.section-1 #slide1 .contents,
+    main.section-2 #slide1 .contents{
+        top: 48.5em;
+    }
+    main.section-2 .origin-of-love .inside-contents .video-cover{
+        top: 18% !important;
+    }
+    main.section-2 .activity-memories{
+        margin-top: 38em;
+    }
+    main.section-2 .activity-memories .marquee{
+        margin-top: 13em;
+    }
+    main.section-2 #slide2 footer{
+        margin-top: 25em;
+    }
+
+}
+
+@media only screen and (min-width: 551px) and (max-width: 930px){
 
     main.section-1 #slide1 .car,
     main.section-2 #slide1 .car{
@@ -823,15 +906,15 @@ footer#sole-footer .navigation .item a{
         height: 2400px;
     }
     main.section-2 .activity-memories {
-        margin-top: 25em;
+        margin-top: 33em;
     }
     main.section-2 #slide2 footer{
-        margin-top: 14em;
+        margin-top: 21em;
     }
 
 }
 
-@media only screen and (min-width:500px) and (max-width: 1600px) {
+@media only screen and (min-width: 413px) and (max-width: 1600px) {
 
     img.first-bird{
         display: none;
@@ -1151,7 +1234,6 @@ footer#sole-footer .navigation .item a{
     main.section-1 .closing-details .each-detail,
     main.section-2 .strength .school-info .each-info{
         display: block; margin: auto;
-        margin-top: 2em; margin-bottom: 2em;
     }
     main.section-2 .strength .school-info .amount span{
         font-size: 75px; letter-spacing: 5.5px;
@@ -1260,7 +1342,7 @@ footer#sole-footer .navigation .item a{
         width: 115px;
     }
     main.section-1 .closing-details .each-detail{
-        margin: 1em 1em;
+        margin: 2.5em 1em;
     }
     main.section-1 .closing-details .topic{
         width: 255px; margin: auto;
@@ -1315,7 +1397,7 @@ footer#sole-footer .navigation .item a{
     }
 
     main.section-2 .strength h2{
-        margin-bottom: 0;
+        margin-bottom: .75em;
     }
     main.section-2 .origin-of-love .inside-contents .video-cover {
         position: absolute;
