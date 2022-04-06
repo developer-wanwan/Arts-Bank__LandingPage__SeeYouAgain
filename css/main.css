@@ -103,6 +103,13 @@ button.to-top, button.to-bottom{
 button.to-top i, button.to-bottom i{
     font-size: 40px;
 }
+button.to-top span{
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    top: -10px; left: 1px; 
+    letter-spacing: 1.5px;
+}
 
 img.original-bird{
     position: absolute; 
@@ -356,7 +363,11 @@ main.section-1 #slide2 .methods .step::after{
     font-family: FontAwesome;
     color: #4C2A47;
     /*Alignment*/
-    float: right; transform: translate(42px,-215px);
+    position: absolute;
+    transform: translate(125px,-155px);
+}
+main.section-1 #slide2 .methods .step:nth-child(3):after{
+    transform: translate(125px,-167px);
 }
 main.section-1 #slide2 .methods .step img,
 main.section-1 #slide2 .methods .carousel-cell img{
@@ -377,13 +388,7 @@ main.section-1 #slide2 .methods .carousel-cell h3{
 }
 main.section-1 #slide2 .methods .step .item,
 main.section-1 #slide2 .methods .carousel-cell .item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-}
-main.section-1 #slide2 .methods .carousel-cell.large .item{
-    height: 125px;
+    margin-top: 3em;
 }
 main.section-1 #slide2 .methods .step .item p,
 main.section-1 #slide2 .methods .carousel-cell p{
@@ -402,14 +407,24 @@ main.section-1 #slide2 .methods .carousel-cell.large a{
     letter-spacing: 1.25px; 
     position: relative; top: -0.75em;
 }
-main.section-1 #slide2 .methods .step span.number,
+main.section-1 #slide2 .methods .step span.number{
+    color: #FFF;
+    font-size: 30px;
+    width: 50px; height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(-24px, -25px);
+}
 main.section-1 #slide2 .methods .carousel-cell span.number{
     color: #FFF;
     font-size: 30px;
-    padding: .2em .6em;
     width: 50px; height: 50px;
     border-radius: 100%;
-    position: relative; top: -0.65em;
+    position: absolute;
+    top: -0.82em;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0; right: 0;
 }
 main.section-1 #slide2 .methods .step:nth-child(1) span.number,
 main.section-1 #slide2 .methods .step:nth-child(2) span.number,
@@ -423,6 +438,12 @@ main.section-1 #slide2 .methods .carousel-cell:nth-child(3) span.number,
 main.section-1 #slide2 .methods .carousel-cell:nth-child(4) span.number{
     background: #EC641B;
 }
+main.section-1 #slide2 .methods .step:nth-child(1) p,
+main.section-1 #slide2 .methods .step:nth-child(2) p,
+main.section-1 #slide2 .methods .step:nth-child(3) .paragraphes{
+    margin-top: 3.5em;
+}
+
 main.section-1 #slide2 .remind{
     margin-top: 30px;
     font-size: 18px;
@@ -526,13 +547,6 @@ main.section-1 button.to-top{
 main.section-1 button.to-top i{
     position: relative;
     top: 4.65px;
-}
-main.section-1 button.to-top span{
-    text-transform: uppercase;
-    font-weight: bold;
-    position: relative;
-    top: -10px; left: 1px; 
-    letter-spacing: 1.5px;
 }
 
 /*Main - Section 2*/
@@ -681,13 +695,6 @@ main.section-2 button.to-top i{
     position: relative;
     top: 4.65px;
 }
-main.section-2 button.to-top span{
-    text-transform: uppercase;
-    font-weight: bold;
-    position: relative;
-    top: -10px; left: 1px; 
-    letter-spacing: 1.5px;
-}
 
 footer#sole-footer .navigation{
     text-align: center;
@@ -717,16 +724,47 @@ footer#sole-footer .navigation .item a{
         margin-top: 2em !important;
     }
 
+    img.first-bird{
+        bottom: 5.5em;
+    }
+
     main.section-1 #slide1,
     main.section-2 #slide1{
-        height: 300vh !important;
+        background-size: contain;
+        height: 1618px;
+    }
+    main.section-1 #slide1 .car,
+    main.section-2 #slide1 .car{
+        top: 22em;
+    }
+    main.section-1 button.to-bottom,
+    main.section-2 button.to-bottom{
+        top: 34em;
+    }
+    main.section-1 #slide1 .contents,
+    main.section-2 #slide1 .contents{
+        top: 38.5em;
     }
 
     main.section-1 #slide2,
     main.section-2 #slide2{
-        height: 300vh !important;
+        background-size: contain;
+        height: 2010px;
+    }
+    main.section-2 .strength h2{
+        margin-bottom: .5em;
+    }
+    main.section-2 .strength .school-info{
+        margin-top: 0;
+    }
+    main.section-2 .strength .school-info .each-info{
+        margin-top: 2em !important; 
+        margin-bottom: 0 !important;
     }
 
+    main.section-2 #slide2 .contents{
+        top: 3.25em !important;
+    }
     main.section-2 .origin-of-love .inside-contents .video-cover {
         position: absolute;
         top: 20.5%;
@@ -736,8 +774,17 @@ footer#sole-footer .navigation .item a{
         margin-right: auto;
         text-align: center;
     }
+    main.section-2 .activity-memories{
+        margin-top: 23em !important;
+    }
+    main.section-2 .activity-memories .marquee{
+        margin-top: 6.5em;
+    }
     main.section-2 #slide2 footer{
-        margin-top: 14em !important;
+        margin-top: 9em !important;
+    }
+    main.section-2 #slide2 footer .contents{
+        top: 0 !important;
     }
 
 }
@@ -751,14 +798,12 @@ footer#sole-footer .navigation .item a{
         background-image: url(../img/arts_bank_mobile_wallppaper_1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 230vh;
     }
 
     main.section-1 #slide2{
         background-image: url(../img/arts_bank_mobile_wallppaper_2.1.jpg);
         background-repeat: repeat-y;
         background-size: cover;
-        height: 240vh;
     }
 
     main.section-2 #slide2{
@@ -771,6 +816,7 @@ footer#sole-footer .navigation .item a{
     img.first-bird{
         width: 50px;
         right: 3em;
+        bottom: 5.5em;
     }
 
     main.section-1 #slide2 .methods .step{
@@ -791,7 +837,7 @@ footer#sole-footer .navigation .item a{
 
     footer#sole-footer .navigation .item {
         padding: 0 1.25em; margin: 1.2em 0;
-        height: 15px;
+        height: 15px; margin-bottom: 2em !important;
     }
     footer#sole-footer .navigation .item a{
         font-size: 15px; 
@@ -917,33 +963,19 @@ footer#sole-footer .navigation .item a{
 
 }
 
-@media only screen and (max-width: 1100px){
-
-    main.section-2 .strength .school-info .each-info{
-        display: block; margin: auto;
-        margin-top: 3em; margin-bottom: 3em;
-    }
-    main.section-2 .strength .school-info .amount span{
-        font-size: 75px; letter-spacing: 5.5px;
-    }
-    main.section-2 .strength .school-info p.target{
-        font-size: 22px; letter-spacing: 0;
-    }
-    
-}
-
 @media only screen and (max-width: 990px){
 
     button.to-top, button.to-bottom{
-        width: 53px; height: 53px;
         position: absolute; left: 0; right: 0;
         margin-left: auto; margin-right: auto;
+        width: 50px; height: 50px;
     }
     button.to-bottom i, button.to-top i{
-        font-size: 25px;
+        font-size: 28px;
     }
     button.to-top span{
-        font-size: 15px;
+        font-size: 13px; 
+        left: 0;
     }
 
     header .navbar{
@@ -983,6 +1015,21 @@ footer#sole-footer .navigation .item a{
 
 }
 
+@media only screen and (max-width: 1100px){
+
+    main.section-2 .strength .school-info .each-info{
+        display: block; margin: auto;
+        margin-top: 3em; margin-bottom: 3em;
+    }
+    main.section-2 .strength .school-info .amount span{
+        font-size: 75px; letter-spacing: 5.5px;
+    }
+    main.section-2 .strength .school-info p.target{
+        font-size: 22px; letter-spacing: 0;
+    }
+    
+}
+
 @media only screen and (max-width: 1150px){
 
     .long-topic-circle {
@@ -991,13 +1038,13 @@ footer#sole-footer .navigation .item a{
         margin: auto;
         padding-left: 0;
         padding-right: 0;
-        padding-bottom: 1.2em;
+        padding-bottom: 1.5em;
         top: 7.5px;
     }
     .long-topic-circle span{
         vertical-align: middle;
         position: relative;
-        top: 11px;
+        top: 10px;
     }
     .short-topic-circle span{
         vertical-align: middle;
@@ -1020,12 +1067,12 @@ footer#sole-footer .navigation .item a{
         padding-left: 0; padding-bottom: .5em;
     }
     .eye-topic-frame span{
-        left: 2.25px; top: -0.8em;
+        left: 2.25px; top: -0.65em;
     }
 
     img.original-bird{
         width: 50px;
-        left: 2em; top: 28em;
+        left: 2em; top: 21em;
     }
     img.second-bird{
         display: none;
@@ -1034,27 +1081,24 @@ footer#sole-footer .navigation .item a{
     main.section-2 #slide1 .top-topic{
         position: absolute; left: 0; right: 0;
         margin-left: auto; margin-right: auto;
-        margin-top: 1em; 
     }
     main.section-1 #slide1 .car,
     main.section-2 #slide1 .car{
         width: 80%;
         right: 2em;
-        top: 28em;
     }
     main.section-1 .text-frame,
     main.section-2 .text-frame{
-        width: 90%;
+        width: 90%; padding: 2em 0;
     }
     main.section-1 button.to-bottom,
     main.section-2 button.to-bottom{
         position: absolute; left: 0; right: 0;
         margin-left: auto; margin-right: auto;
-        top: 44em;
     }
     main.section-1 #slide1 .contents,
     main.section-2 #slide1 .contents{
-        top: 49em;
+        top: ;
     }
     main.section-1 #slide1 h1,
     main.section-2 #slide1 .text-frame h2{
@@ -1079,10 +1123,10 @@ footer#sole-footer .navigation .item a{
         margin-top: 2.25em;
     }
     main.section-1 .closing-details .each-detail img{
-        width: 155px;
+        width: 115px;
     }
     main.section-1 .closing-details .each-detail{
-        margin: 1.5em 1em;
+        margin: 1em 1em;
     }
     main.section-1 .closing-details .topic{
         width: 255px; margin: auto;
@@ -1105,6 +1149,7 @@ footer#sole-footer .navigation .item a{
     }
     main.section-1 #slide2 .vip-invition h2{
         font-size: 30px; line-height: 35px;
+        margin-bottom: 0;
     }
     main.section-1 #slide2 .vip-invition p{
         font-size: 15px; display: inline;
@@ -1159,7 +1204,7 @@ footer#sole-footer .navigation .item a{
         width: 275px; height: 410px;
     }
     main.section-1 #slide2 .cultural-coin .section-1 .frame h2{
-        font-size: 21px; top: -1px;
+        font-size: 21px; top: -1px; letter-spacing: .5px;
     }
     main.section-1 #slide2 .cultural-coin .section-2 .frame mark{
         background: none;
