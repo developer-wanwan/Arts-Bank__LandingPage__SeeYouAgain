@@ -753,7 +753,12 @@ footer#sole-footer .navigation .item a{
     main.section-1 #slide2,
     main.section-2 #slide2{
         background-size: contain;
+    }
+    main.section-1 #slide2{
         height: 2010px;
+    }
+    main.section-2 #slide2{
+        height: 2070px;
     }
     main.section-2 .strength h2{
         margin-bottom: .5em;
@@ -784,7 +789,7 @@ footer#sole-footer .navigation .item a{
 
 }
 
-@media only screen and (min-width: 401px) and (max-width: 900px){
+@media only screen and (min-width: 401px) and (max-width: 930px){
 
     main.section-1 #slide1 .car,
     main.section-2 #slide1 .car{
@@ -798,11 +803,9 @@ footer#sole-footer .navigation .item a{
     main.section-2 #slide1{
         background-position: 80%;
     }
-    main.section-1 #slide1{
-        height: 1600px;
-    }
+    main.section-1 #slide1,
     main.section-2 #slide1{
-        height: 1780px;
+        height: 1600px;
     }
     main.section-1 #slide1 .contents,
     main.section-2 #slide1 .contents{
@@ -812,7 +815,8 @@ footer#sole-footer .navigation .item a{
     main.section-2 #slide2{
         background-position: 20%;
     }
-    main.section-1 #slide2{
+    main.section-1 #slide2,
+    main.section-2 #slide2{
         height: 2250px;
     }
     main.section-2 #slide2{
@@ -827,8 +831,20 @@ footer#sole-footer .navigation .item a{
 
 }
 
+@media only screen and (min-width:500px) and (max-width: 1600px) {
+
+    img.first-bird{
+        display: none;
+    }
+
+}
+
 @media only screen and (max-width: 550px){
 
+    img.car{
+        width: 80% !important;
+        right: 0 !important;
+    }
     .topic span.bigger{
         font-size: 40px;
     }
@@ -957,9 +973,7 @@ footer#sole-footer .navigation .item a{
 
 @media only screen and (min-width: 600px) and (max-width: 930px) {
 
-    main.section-1 #slide1 .car,
-    main.section-2 #slide1 .car{
-        width: 65% !important;
+    img.car{
         top: 23em !important;
     }
     main.section-1 #slide2 .methods .step h3{
@@ -1016,8 +1030,21 @@ footer#sole-footer .navigation .item a{
 
 }
 
+@media only screen and (max-width: 930px){
+    
+    img.car{
+        position: absolute; left: 0; right: 0;
+        margin-left: auto; margin-right: auto;
+    }
+
+}
+
 @media only screen and (min-width: 931px) and (max-width: 1250px){
     
+    main.section-1 #slide2,
+    main.section-2 #slide2{
+        height: 2200px; 
+    }
     main.section-1 #slide2 .methods{
         margin: 0 0em;
     }
@@ -1048,6 +1075,23 @@ footer#sole-footer .navigation .item a{
         height: auto;
     }
 
+}
+
+@media only screen and (min-width: 931px) and (max-width: 1660px){
+
+    main.section-1 #slide2,
+    main.section-2 #slide2{
+        background-position: 33%;
+    }
+    main.section-1 #slide1 .top-topic, 
+    main.section-2 #slide1 .top-topic{
+        top: 7em !important;
+    }
+    img.car{
+        width: 750px !important;
+        right: 0 !important;
+    }
+    
 }
 
 @media only screen and (max-width: 990px){
@@ -1118,6 +1162,15 @@ footer#sole-footer .navigation .item a{
     
 }
 
+@media only screen and (min-width: 931px) and (max-width: 1150px){
+
+    main.section-1 #slide1 .top-topic, 
+    main.section-2 #slide1 .top-topic{
+        left: -15em !important;
+    }
+
+}
+
 @media only screen and (max-width: 1150px){
 
     .long-topic-circle {
@@ -1132,7 +1185,7 @@ footer#sole-footer .navigation .item a{
     .long-topic-circle span{
         vertical-align: middle;
         position: relative;
-        top: 10px;
+        top: 13px;
     }
     .short-topic-circle span{
         vertical-align: middle;
@@ -1146,21 +1199,21 @@ footer#sole-footer .navigation .item a{
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 1.5em;
-        top: 7.5px;
+        top: 8.2px;
     }
     .eye-topic-frame {
         background: url(../img/arts_bank_eye_icon_mobile.png) no-repeat;
         background-position: none;
-        display: block; width: 350px;
-        padding-left: 0; padding-bottom: .5em;
+        display: block; width: 352px;
+        padding-left: 0; padding-bottom: .75em;
     }
     .eye-topic-frame span{
-        left: 2.25px; top: -0.65em;
+        left: 2.25px; top: -0.6em;
     }
 
     img.original-bird{
         width: 50px;
-        left: 2em; top: 25em;
+        left: 2em; top: 21em;
     }
     img.second-bird{
         display: none;
@@ -1172,7 +1225,7 @@ footer#sole-footer .navigation .item a{
     }
     main.section-1 #slide1 .car,
     main.section-2 #slide1 .car{
-        width: 80%;
+        width: 500px;
         right: 2em;
     }
     main.section-1 .text-frame,
@@ -1183,10 +1236,6 @@ footer#sole-footer .navigation .item a{
     main.section-2 button.to-bottom{
         position: absolute; left: 0; right: 0;
         margin-left: auto; margin-right: auto;
-    }
-    main.section-1 #slide1 .contents,
-    main.section-2 #slide1 .contents{
-        top: ;
     }
     main.section-1 #slide1 h1,
     main.section-2 #slide1 .text-frame h2{
@@ -1233,8 +1282,8 @@ footer#sole-footer .navigation .item a{
         top: 4.25em;
     }
     main.section-1 #slide2 .vip-invition h2{
-        font-size: 30px; line-height: 35px;
-        margin-bottom: 0;
+        font-size: 25px; line-height: 35px;
+        margin-bottom: .75em;
     }
     main.section-1 #slide2 .vip-invition p{
         font-size: 15px; display: inline;
@@ -1265,6 +1314,9 @@ footer#sole-footer .navigation .item a{
         margin-left: 5em;
     }
 
+    main.section-2 .strength h2{
+        margin-bottom: 0;
+    }
     main.section-2 .origin-of-love .inside-contents .video-cover {
         position: absolute;
         top: 20.5%;
@@ -1319,9 +1371,6 @@ footer#sole-footer .navigation .item a{
     main.section-1 #slide2 footer article{
         margin-left: 1em; margin-right: 1em;
     }
-    main.section-1 #slide2 footer article mark{
-        background: #fad3d6; padding: 0;
-    }
     main.section-1 #slide2 footer article p{
         font-size: 18px; line-height: 1.75;
         margin-bottom: 0;
@@ -1343,9 +1392,42 @@ footer#sole-footer .navigation .item a{
     main.section-2 .origin-of-love .inside-contents article p{
         font-size: 15px;
     }
+    main.section-2 #slide2 footer img{
+        width: 304px; float: none;
+        margin: auto; display: block !important;
+    }
 
     footer#sole-footer .navigation .item{
         border-right: 1px solid #7B3D48;
+    }
+
+}
+
+@media only screen and (min-width: 1151px) and (max-width: 1250px){
+
+    main.section-1 button.to-top{
+        margin-top: 5em;
+    }
+    main.section-2 .origin-of-love{
+        top: 2.5em;
+        position: relative;
+    }
+    main.section-2 .origin-of-love .inside-contents{
+        margin-top: 3em;
+    }
+    main.section-2 .origin-of-love .video-cover img{
+        width: 350px;
+    }
+    main.section-2 .activity-memories{
+        margin-top: 18em;
+    }
+    main.section-2 #slide2 footer{
+        padding: 0 2em;
+        margin-top: 17.55em;
+    }
+    main.section-2 #slide2 footer img{
+        display: inline-block !important;
+        margin-top: 0;
     }
 
 }
@@ -1360,18 +1442,6 @@ footer#sole-footer .navigation .item a{
     }
     main.section-2 #slide2 footer article p{
         margin: 1.4em 0;
-    }
-    main.section-2 #slide2 footer img{
-        width: 304px; float: none;
-        margin: auto; display: block !important;
-    }
-
-}
-
-@media only screen and (min-width:500px) and (max-width: 1600px) {
-
-    img.first-bird{
-        display: none;
     }
 
 }
