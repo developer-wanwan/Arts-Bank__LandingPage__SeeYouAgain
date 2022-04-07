@@ -1,23 +1,4 @@
-$(document).ready(function(){
- 
-    $('.navbar .btn-1').click(function(e){
-        e.preventDefault();
-        $('main.section-1').addClass('active');
-        $('main.section-2').removeClass('active');
-        $('.navbar .btn-1').addClass('active');
-        $('.navbar .btn-2').removeClass('active');
-    });
-
-    $('.navbar .btn-2').click(function(e){
-        e.preventDefault();
-        $('main.section-2').addClass('active');
-        $('main.section-1').removeClass('active');
-        $('.navbar .btn-2').addClass('active');
-        $('.navbar .btn-1').removeClass('active');
-    });
-  
-});
-
+//MenuBtn
 const menuBtn = document.querySelector('header .navbar-toggler');
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
@@ -30,26 +11,20 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
-const root = document.documentElement;
-const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-const marqueeContent = document.querySelector("ul.marquee-content");
-
-root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
-for(let i=0; i<marqueeElementsDisplayed; i++) {
-  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-};
-
 //Animation
 gsap.registerPlugin(ScrollTrigger);
 
-//=== Index-Slides Common Animation ===// 
-gsap.fromTo('#index-slide1 img.bird, #index-slide4 img.transfer-bird', { 
-    x: 0
-},{
-    x: 18, duration: .6,
-    repeat: -1, delay: 3,
-    yoyo: true, ease: Power2.easeInOut,
+gsap.fromTo('main.section-1 #slide1 .top-topic, main.section-2 #slide1 .top-topic', { 
+    y: -200, opacity: 0
+}, {
+    y: 0, opacity: 1,
+    duration: 1, ease: "bounce.out",
+})
+gsap.fromTo('img.car', { 
+    x: 200, opacity: 0
+}, {
+    x: 0, opacity: 1, delay: .75,
+    duration: 1, ease: "bounce.out",
 })
 gsap.fromTo('img.car', { 
     x: 0
@@ -71,145 +46,266 @@ gsap.fromTo('img.original-bird, img.second-bird', {
     repeat: -1, yoyo: true, ease: Power2.easeInOut,
 })
 gsap.fromTo('button.to-bottom', { 
-    y: -80, opacity: 0,
+    opacity: 0,
 },{
-    y: 0, opacity: 1, 
-    duration: 1, ease: "bounce.out",
+    opacity: 1, duration: 1, 
+    stagger: .5, delay: 1.85,
 })
-gsap.fromTo('button.to-top, button.to-bottom', { 
+gsap.fromTo('button.to-bottom', { 
+    y: -20
+},{
+    y: 0, duration: 1, repeat: -1, 
+    yoyo: true, ease: Power2.easeInOut,
+    delay: 2.2,
+})
+gsap.fromTo('button.to-top', { 
     y: 0
 },{
     y: -20, duration: 1, repeat: -1, 
     yoyo: true, ease: Power2.easeInOut,
-    delay: 1.75
+    delay: 1,
 })
 
-//=== Index-Slides1 ===//
-gsap.fromTo('#index-slide1 img.title', { 
-    y: -200, opacity: 0,
-},{
-    y: 0, opacity: 1, 
-    duration: 1, ease: "bounce.out",
-})
-gsap.fromTo('img.car', { 
-    x: 200, opacity: 0
-}, {
-    x: 0, opacity: 1, delay: 1,
-    duration: 1, ease: "bounce.out",
-})
-gsap.fromTo('#index-slide1 .points-container .points', { 
+//=== Section-1 ===//
+gsap.fromTo('main.section-1 #slide1 .text-frame', { 
     y: 200, opacity: 0
 }, {
     y: 0, opacity: 1, 
     duration: 1, ease: "sine.inOut",
     scrollTrigger:{
-        trigger: '#index-slide1',
-        start: 'bottom 80%'
+        trigger: 'main.section-1 #slide1 .text-frame',
+        start: 'top 80%'
     }
 })
-
-//=== Index-Slides2 ===//
-gsap.fromTo('#index-slide2 article .advise-container', { 
+gsap.fromTo('main.section-1 #slide1 .closing-details .each-detail:first-child', { 
     y: 200, opacity: 0
+}, {
+    y: 0, opacity: 1, 
+    duration: 1, ease: "sine.inOut",
+    scrollTrigger:{
+        trigger: 'main.section-1 #slide1 .closing-details',
+        start: 'top 50%'
+    }
+})
+gsap.fromTo('main.section-1 #slide1 .closing-details .each-detail:nth-child(2)', { 
+    y: 200, opacity: 0
+}, {
+    y: 0, opacity: 1, delay: .5,
+    duration: 1, ease: "sine.inOut",
+    scrollTrigger:{
+        trigger: 'main.section-1 #slide1 .closing-details',
+        start: 'top 50%'
+    }
+})
+gsap.fromTo('main.section-1 #slide2 .vip-invition h2', { 
+    y: -100, opacity: 0
+}, {
+    y: 0, opacity: 1,
+    duration: 1, ease: "bounce.out",
+    scrollTrigger:{
+        trigger: 'main.section-1 #slide2 .vip-invition',
+        start: 'top 50%'
+    }
+})
+gsap.fromTo('main.section-1 #slide2 .vip-invition .remind', { 
+    y: -50, opacity: 0
+}, {
+    y: 0, opacity: 1, delay: .5,
+    duration: 1, ease: "power2.out",
+    scrollTrigger:{
+        trigger: 'main.section-1 #slide2 .vip-invition .remind',
+        start: 'top 50%'
+    }
+})
+gsap.fromTo('main.section-1 #slide2 .carousel, main.section-1 #slide2 .steps', { 
+    y: 100, opacity: 0
 }, {
     y: 0, opacity: 1,
     duration: 1, ease: "sine.inOut",
     scrollTrigger:{
-        trigger: '#index-slide2 article .advise-container',
+        trigger: 'main.section-1 #slide2 .carousel, main.section-1 #slide2 .steps',
+        start: 'top 60%'
     }
 })
-gsap.fromTo('#index-slide2 .carousel', { 
+gsap.fromTo('main.section-1 #slide2 p.remind, main.section-1 #slide2 button.icons-1', { 
     y: 50, opacity: 0
 }, {
-    y: 0, opacity: 1, delay: 1,
-    duration: 1, ease: "sine.inOut",
-    scrollTrigger:{
-        trigger: '#index-slide2 .carousel',
-    }
-})
-
-//=== Index-Slides3 ===//
-gsap.fromTo('#index-slide3 img.left-bird', { 
-    x: -150, opacity: 0
-}, {
-    x: 0, opacity: 1,
-    duration: 1, ease: "bounce.out",
-    scrollTrigger:{
-        trigger: '#index-slide3',
-        start: 'top 80%'
-    }
-})
-gsap.fromTo('#index-slide3 img.right-bird', { 
-    x: 150, opacity: 0
-}, {
-    x: 0, opacity: 1,
-    duration: 1, ease: "bounce.out",
-    scrollTrigger:{
-        trigger: '#index-slide3',
-        start: 'top 80%'
-    }
-})
-gsap.fromTo('#index-slide3 .advantages-container .advantages', { 
-    y: 200, opacity: 0
-}, {
     y: 0, opacity: 1, delay: .5,
-    duration: 1, ease: "sine.inOut",
+    duration: 1, ease: "power2.out",
     scrollTrigger:{
-        trigger: '#index-slide3 .advantages-container',
-        start: 'top 70%'
-    }
-})
-gsap.fromTo('#index-slide3 article button', { 
-    y: 70, opacity: 0
-}, {
-    y: 0, opacity: 1, delay: 1,
-    duration: 1, ease: "sine.inOut",
-    scrollTrigger:{
-        trigger: '#index-slide3 .advantages-container',
-        start: 'top 70%'
-    }
-})
-
-//=== Index-Slides4 ===//
-gsap.fromTo('#index-slide4 img.transfer-bird', { 
-    x: 200, opacity: 0
-}, {
-    x: 0, opacity: 1,
-    duration: 1, ease: "bounce.out",
-    scrollTrigger:{
-        trigger: '#index-slide4',
+        trigger: 'main.section-1 #slide2 .carousel, main.section-1 #slide2 .steps',
         start: 'top 50%'
     }
 })
-
-//=== Index-Slides5 ===//
-gsap.fromTo('#index-slide5 img.payments-bird',{ 
-    x: -200, opacity: 0
+gsap.fromTo('main.section-1 #slide2 .cultural-coin .section-1 img', { 
+    x: 50, opacity: 0
 }, {
     x: 0, opacity: 1,
     duration: 1, ease: "bounce.out",
     scrollTrigger:{
-        trigger: '#index-slide5 .payment-methods',
-        start: 'top 90%'
+        trigger: 'main.section-1 #slide2 .cultural-coin .section-1',
+        start: 'top 50%'
     }
 })
-gsap.fromTo('#index-slide5 .payment-methods', { 
-    y: 200, opacity: 0
+gsap.fromTo('main.section-1 #slide2 .cultural-coin .section-1 .frame', { 
+    x: 30, opacity: 0
 }, {
-    y: 0, opacity: 1, delay: .5,
+    x: 0, opacity: 1, delay: 1.75,
+    duration: 1, ease: "power2.out",
+    scrollTrigger:{
+        trigger: 'main.section-1 #slide2 .cultural-coin .section-1',
+        start: 'top 50%'
+    }
+})
+gsap.fromTo('main.section-1 #slide2 .cultural-coin .section-2 img', { 
+    x: -80, opacity: 0
+}, {
+    x: 0, opacity: 1, delay: 1,
+    duration: 1, ease: "bounce.out",
+    scrollTrigger:{
+        trigger: 'main.section-1 #slide2 .cultural-coin .section-1',
+        start: 'top 50%'
+    }
+})
+gsap.fromTo('main.section-1 #slide2 .cultural-coin .section-2 .frame', { 
+    x: -20, opacity: 0
+}, {
+    x: 0, opacity: 1, delay: 2.25,
+    duration: 1, ease: "power2.out",
+    scrollTrigger:{
+        trigger: 'main.section-1 #slide2 .cultural-coin .section-1',
+        start: 'top 50%'
+    }
+})
+gsap.fromTo('main.section-1 #slide2 footer .reward', { 
+    y: 50, opacity: 0
+}, {
+    y: 0, opacity: 1, 
+    duration: 1, ease: "power2.out",
+    scrollTrigger:{
+        trigger: 'main.section-1 #slide2 footer',
+        start: 'top 70%'
+    }
+})
+gsap.fromTo('main.section-1 #slide2 footer article', { 
+    y: 100, opacity: 0
+}, {
+    y: 0, opacity: 1, delay: .75,
+    duration: 1, ease: "power2.out",
+    scrollTrigger:{
+        trigger: 'main.section-1 #slide2 footer',
+        start: 'top 70%'
+    }
+})
+
+//=== Section-2 ===//
+gsap.fromTo('main.section-2 #slide1 .text-frame', { 
+    y: 500, opacity: 0
+}, {
+    y: 0, opacity: 1, 
     duration: 1, ease: "sine.inOut",
     scrollTrigger:{
-        trigger: '#index-slide5 .payment-methods',
+        trigger: 'main.section-2 .strength .school-info',
         start: 'top 90%'
     }
 })
-gsap.fromTo('#index-slide5 .payment-methods button', { 
-    y: 20, opacity: 0
+gsap.fromTo('main.section-2 .strength h2', { 
+    y: -50, opacity: 0
 }, {
     y: 0, opacity: 1, delay: 1,
     duration: 1, ease: "sine.inOut",
     scrollTrigger:{
-        trigger: '#index-slide5 .payment-methods',
-        start: 'top 90%'
+        trigger: 'main.section-2 .strength .school-info',
+        start: 'top 80%'
+    }
+})
+gsap.fromTo('main.section-2 .strength .school-info .each-info', { 
+    y: 100, opacity: 0
+}, {
+    y: 0, opacity: 1, delay: 1.5,
+    duration: 1, ease: "sine.inOut",
+    scrollTrigger:{
+        trigger: 'main.section-2 .strength .school-info',
+        start: 'top 80%'
+    }
+})
+gsap.fromTo('main.section-2 .origin-of-love h2.topic', { 
+    y: -100, opacity: 0
+}, {
+    y: 0, opacity: 1, 
+    duration: 1, ease: "bounce.out",
+    scrollTrigger:{
+        trigger: 'main.section-2 .origin-of-love .inside-contents',
+        start: 'top 70%'
+    }
+})
+gsap.fromTo('main.section-2 .origin-of-love .inside-contents article', { 
+    y: -50, opacity: 0
+}, {
+    y: 0, opacity: 1, delay: 1,
+    duration: 1, ease: "power2.out",
+    scrollTrigger:{
+        trigger: 'main.section-2 .origin-of-love .inside-contents',
+        start: 'top 70%'
+    }
+})
+gsap.fromTo('main.section-2 .origin-of-love .video-cover img', { 
+    y: 100, opacity: 0
+}, {
+    y: 0, opacity: 1, delay: 1.6,
+    duration: 1, ease: "power2.out",
+    scrollTrigger:{
+        trigger: 'main.section-2 .origin-of-love .inside-contents',
+        start: 'top 70%'
+    }
+})
+gsap.fromTo('main.section-2 .activity-memories h2', { 
+    y: -100, opacity: 0
+}, {
+    y: 0, opacity: 1, 
+    duration: 1, ease: "bounce.out",
+    scrollTrigger:{
+        trigger: 'main.section-2 .activity-memories',
+        start: 'top 50%'
+    }
+})
+gsap.fromTo('main.section-2 .activity-memories .marquee', { 
+    opacity: 0
+}, {
+    opacity: 1, delay: 1,
+    duration: 1, ease: "power2.out",
+    scrollTrigger:{
+        trigger: 'main.section-2 .activity-memories',
+        start: 'top 50%'
+    }
+})
+gsap.fromTo('main.section-2 #slide2 footer h2 .long-topic-circle', { 
+    y: -100, opacity: 0
+}, {
+    y: 0, opacity: 1, 
+    duration: 1, ease: "bounce.out",
+    scrollTrigger:{
+        trigger: 'main.section-2 #slide2 footer ',
+        start: 'top 50%'
+    }
+})
+gsap.fromTo('main.section-2 #slide2 footer article', { 
+    y: -50, opacity: 0
+}, {
+    y: 0, opacity: 1, delay: 1,
+    duration: 1, ease: "power2.out",
+    scrollTrigger:{
+        trigger: 'main.section-2 #slide2 footer ',
+        start: 'top 50%'
+    }
+})
+gsap.fromTo('main.section-2 #slide2 footer img', { 
+    y: -50, opacity: 0
+}, {
+    y: 0, opacity: 1, delay: 1.6,
+    duration: 1, ease: "power2.out",
+    scrollTrigger:{
+        trigger: 'main.section-2 #slide2 footer',
+        start: 'top 50%'
     }
 })
