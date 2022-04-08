@@ -127,11 +127,12 @@
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-family: 'Gen Jyuu Gothic P';
 }
 h1,h2,h3{
     letter-spacing: 1.5px;
     color: #4C2A47; 
-    font-family: '';
+    font-family: 'Gen Jyuu Gothic P';
 }
 .topic{
     font-weight: bold;
@@ -139,9 +140,9 @@ h1,h2,h3{
 .topic span.bigger{
     font-size: 55px;
 }
-p, button, .gothic{
-    font-family: 'Gen Jyuu Gothic P';
+p, button, .gothic, a, span{
     letter-spacing: 1.5px;
+    font-family: 'Gen Jyuu Gothic P';
 }
 p{
     color: #4C2A47; 
@@ -331,7 +332,6 @@ header .navbar a.nav-link{
     letter-spacing: 1px; cursor: pointer;
     position: relative; top: -5px;
     padding-top: 0; color: #6D3541;
-    font-family: '';
 }
 header .navbar .nav-item:first-child a.nav-link{
     padding-right: 5em;
@@ -490,10 +490,10 @@ main.section-1 #slide2 .methods .step::after{
     color: #4C2A47;
     /*Alignment*/
     position: absolute;
-    transform: translate(132px,-155px);
+    transform: translate(142px,-155px);
 }
 main.section-1 #slide2 .methods .step:nth-child(3):after{
-    transform: translate(132px,-167px);
+    transform: translate(142px,-167px);
 }
 main.section-1 #slide2 .methods .step img,
 main.section-1 #slide2 .methods .carousel-cell img{
@@ -547,6 +547,14 @@ main.section-1 #slide2 .methods .carousel-cell span.number{
     margin-left: auto;
     margin-right: auto;
     left: 0; right: 0;
+}
+main.section-1 #slide2 .methods .step span.number span,
+main.section-1 #slide2 .methods .carousel-cell span.number span{
+    position: relative; top: 3px;
+}
+main.section-1 #slide2 .methods .step:nth-child(3) span.number span,
+main.section-1 #slide2 .methods .carousel-cell:nth-child(3) span.number span{
+    left: 1px;
 }
 main.section-1 #slide2 .methods .step:nth-child(1) span.number,
 main.section-1 #slide2 .methods .step:nth-child(2) span.number,
@@ -644,7 +652,7 @@ main.section-1 #slide2 .cultural-coin .section-2 .frame mark{
 }
 main.section-1 #slide2 .cultural-coin .section-2 .frame img.money-icon{
     width: 84px; position: relative; float: right;
-    left: -4.7em; top: -0.6em;
+    left: -4.7em; top: -3.75em;
 }
 main.section-1 #slide2 footer .reward{
     width: 545px; margin-top: 18px;
@@ -702,7 +710,7 @@ main.section-2 .text-frame{
                 rgba(0, 0, 0, 0.1) 0px 4px 4px, rgba(0, 0, 0, 0.1) 0px 8px 8px, 
                 rgba(0, 0, 0, 0.1) 0px 16px 16px;
 }
-main.section-2 .text-frame h2{
+main.section-2 .text-frame h1{
     color: #4C2A47;
     margin-bottom: .75em;
     font-size: 34px;
@@ -837,6 +845,9 @@ footer#sole-footer .navigation .item a{
     main.section-1 #slide2 footer article{
         margin-top: 3em;
     }
+    main.section-1 #slide2 .cultural-coin .section-2 .frame img.money-icon{
+        top: 1em;
+    }
 
     button.to-top{
         margin-top: 2em !important;
@@ -877,6 +888,8 @@ footer#sole-footer .navigation .item a{
     }
     main.section-2 .strength h2{
         margin-bottom: .5em;
+        padding: 0 .5em;
+        font-size: 20px !important;
     }
     main.section-2 .strength .school-info{
         margin-top: 0;
@@ -890,13 +903,13 @@ footer#sole-footer .navigation .item a{
         top: 3.25em !important;
     }
     main.section-2 .activity-memories{
-        margin-top: 23em !important;
+        margin-top: 20em !important;
     }
     main.section-2 .activity-memories .marquee{
-        margin-top: 5em;
+        margin-top: 6.8em;
     }
     main.section-2 #slide2 footer{
-        margin-top: 9em !important;
+        margin-top: 10em !important;
     }
     main.section-2 #slide2 footer .contents{
         top: 0 !important;
@@ -1039,6 +1052,10 @@ footer#sole-footer .navigation .item a{
     img.car{
         width: 80% !important;
         right: 0 !important;
+    }
+    .eye-topic-frame span{
+        left: 2.25px;
+        top: -0.7em;
     }
     .topic span.bigger{
         font-size: 40px !important;
@@ -1210,6 +1227,24 @@ footer#sole-footer .navigation .item a{
 
 }
 
+@media only screen and (min-width: 551px) and (max-width: 674px){
+
+    .eye-topic-frame span{
+        left: 2.25px;
+        top: -0.8em;
+    }
+
+}
+
+@media only screen and (min-width: 675px) and (max-width: 749px){
+
+    .eye-topic-frame span{
+        left: 2.25px;
+        top: -1.15em;
+    }
+
+}
+
 @media only screen and (min-width: 686px) and (max-width: 749px){
 
     main.section-1 #slide2 .methods .step::after{
@@ -1228,6 +1263,11 @@ footer#sole-footer .navigation .item a{
     }
     main.section-1 #slide2 .methods .step.large {
         width: 350px !important;
+    }
+    .eye-topic-frame span{
+        left: 2.25px;
+        top: -1.35em;
+        font-size: 24px;
     }
 
 }
@@ -1329,7 +1369,8 @@ footer#sole-footer .navigation .item a{
     }
 
     main.section-1 #slide2 .vip-invition mark,
-    main.section-1 #slide2 p.remind mark{
+    main.section-1 #slide2 p.remind mark,
+    main.section-1 #slide2 footer article mark{
         background: #fad3d6; padding: 0; 
     }
 
@@ -1352,6 +1393,11 @@ footer#sole-footer .navigation .item a{
 
 @media only screen and (min-width: 931px) and (max-width: 1150px){
 
+    .eye-topic-frame span{
+        left: 2.25px;
+        top: -1.75em;
+        font-size: 24px;
+    }
     button.to-bottom{
         top: 36.25em !important;
     }
@@ -1419,9 +1465,6 @@ footer#sole-footer .navigation .item a{
         background-position: none;
         display: block; width: 352px;
         padding-left: 0; padding-bottom: .75em;
-    }
-    .eye-topic-frame span{
-        left: 2.25px; top: -0.6em;
     }
 
     img.original-bird{
@@ -1598,6 +1641,9 @@ footer#sole-footer .navigation .item a{
     }
     main.section-2 .origin-of-love .video-cover img{
         width: 340px;
+    }
+    main.section-2 .origin-of-love .inside-contents article h3{
+        margin-top: 0;
     }
     main.section-2 .origin-of-love .inside-contents article p{
         font-size: 15px;

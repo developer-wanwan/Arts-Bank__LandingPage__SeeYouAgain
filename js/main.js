@@ -15,9 +15,9 @@ menuBtn.addEventListener('click', () => {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo('main.section-1 #slide1 .top-topic, main.section-2 #slide1 .top-topic', { 
-    y: -200, opacity: 0
+    y: -200, opacity: 0, 
 }, {
-    y: 0, opacity: 1,
+    y: 0, opacity: 1, 
     duration: 1, ease: "bounce.out",
 })
 gsap.fromTo('img.car', { 
@@ -84,7 +84,7 @@ gsap.fromTo('main.section-1 #slide1 .closing-details .each-detail:first-child', 
     duration: 1, ease: "sine.inOut",
     scrollTrigger:{
         trigger: 'main.section-1 #slide1 .closing-details',
-        start: 'top 50%'
+        start: 'top 60%'
     }
 })
 gsap.fromTo('main.section-1 #slide1 .closing-details .each-detail:nth-child(2)', { 
@@ -94,7 +94,7 @@ gsap.fromTo('main.section-1 #slide1 .closing-details .each-detail:nth-child(2)',
     duration: 1, ease: "sine.inOut",
     scrollTrigger:{
         trigger: 'main.section-1 #slide1 .closing-details',
-        start: 'top 50%'
+        start: 'top 60%'
     }
 })
 gsap.fromTo('main.section-1 #slide2 .vip-invition h2', { 
@@ -150,7 +150,7 @@ gsap.fromTo('main.section-1 #slide2 .cultural-coin .section-1 img', {
 gsap.fromTo('main.section-1 #slide2 .cultural-coin .section-1 .frame', { 
     x: 30, opacity: 0
 }, {
-    x: 0, opacity: 1, delay: 1.75,
+    x: 0, opacity: 1, delay: 1,
     duration: 1, ease: "power2.out",
     scrollTrigger:{
         trigger: 'main.section-1 #slide2 .cultural-coin .section-1',
@@ -160,7 +160,7 @@ gsap.fromTo('main.section-1 #slide2 .cultural-coin .section-1 .frame', {
 gsap.fromTo('main.section-1 #slide2 .cultural-coin .section-2 img', { 
     x: -80, opacity: 0
 }, {
-    x: 0, opacity: 1, delay: 1,
+    x: 0, opacity: 1, delay: 1.5,
     duration: 1, ease: "bounce.out",
     scrollTrigger:{
         trigger: 'main.section-1 #slide2 .cultural-coin .section-1',
@@ -170,7 +170,7 @@ gsap.fromTo('main.section-1 #slide2 .cultural-coin .section-2 img', {
 gsap.fromTo('main.section-1 #slide2 .cultural-coin .section-2 .frame', { 
     x: -20, opacity: 0
 }, {
-    x: 0, opacity: 1, delay: 2.25,
+    x: 0, opacity: 1, delay: 2,
     duration: 1, ease: "power2.out",
     scrollTrigger:{
         trigger: 'main.section-1 #slide2 .cultural-coin .section-1',
@@ -194,13 +194,13 @@ gsap.fromTo('main.section-1 #slide2 footer article', {
     duration: 1, ease: "power2.out",
     scrollTrigger:{
         trigger: 'main.section-1 #slide2 footer',
-        start: 'top 70%'
+        start: 'top 60%'
     }
 })
 
 //=== Section-2 ===//
 gsap.fromTo('main.section-2 #slide1 .text-frame', { 
-    y: 500, opacity: 0
+    y: 200, opacity: 0
 }, {
     y: 0, opacity: 1, 
     duration: 1, ease: "sine.inOut",
@@ -239,10 +239,20 @@ gsap.fromTo('main.section-2 .origin-of-love h2.topic', {
         start: 'top 70%'
     }
 })
-gsap.fromTo('main.section-2 .origin-of-love .inside-contents article', { 
-    y: -50, opacity: 0
+gsap.fromTo('main.section-2 .origin-of-love .inside-contents article h3', { 
+    y: -30, opacity: 0
 }, {
     y: 0, opacity: 1, delay: 1,
+    duration: 1, ease: "power2.out",
+    scrollTrigger:{
+        trigger: 'main.section-2 .origin-of-love .inside-contents',
+        start: 'top 70%'
+    }
+})
+gsap.fromTo('main.section-2 .origin-of-love .inside-contents article p', { 
+    y: -20, opacity: 0
+}, {
+    y: 0, opacity: 1, delay: 1.5,
     duration: 1, ease: "power2.out",
     scrollTrigger:{
         trigger: 'main.section-2 .origin-of-love .inside-contents',
@@ -300,7 +310,7 @@ gsap.fromTo('main.section-2 #slide2 footer article', {
     }
 })
 gsap.fromTo('main.section-2 #slide2 footer img', { 
-    y: -50, opacity: 0
+    y: 80, opacity: 0
 }, {
     y: 0, opacity: 1, delay: 1.6,
     duration: 1, ease: "power2.out",
