@@ -461,7 +461,8 @@ main.section-1 #slide2 .vip-invition h2{
     margin-bottom: 1.25em;
 }
 main.section-1 #slide2 .vip-invition p{
-    line-height: 0.75;
+    line-height: 1.5;
+    margin-bottom: 0;
 }
 main.section-1 #slide2 .vip-invition mark,
 main.section-1 #slide2 p.remind mark{
@@ -1290,12 +1291,6 @@ footer#sole-footer .navigation .item a{
     main.section-1 #slide2 .methods{
         margin: 1em 0em;
     }
-    main.section-1 #slide2 .methods .step {
-        width: 350px !important;
-    }
-    main.section-1 #slide2 .methods .step.large {
-        width: 450px !important;
-    }
     main.section-1 #slide2 .methods .step::after {
         transform: translate(193px,-45px);
     }
@@ -1315,6 +1310,17 @@ footer#sole-footer .navigation .item a{
     }
     main.section-1 #slide2 .methods .step.large .item {
         height: auto;
+    }
+
+}
+
+@media only screen and (min-width: 931px) and (max-width: 1350px){
+    
+    main.section-1 #slide2 .methods .step {
+        width: 350px !important;
+    }
+    main.section-1 #slide2 .methods .step.large {
+        width: 450px !important;
     }
 
 }
@@ -1389,6 +1395,17 @@ footer#sole-footer .navigation .item a{
         font-size: 22px; 
     }
     
+}
+
+@media only screen and (min-width: 931px) and (max-width: 1350px){
+    
+    main.section-1 #slide2 .methods .step {
+        width: 350px !important;
+    }
+    main.section-1 #slide2 .methods .step.large {
+        width: 450px !important;
+    }
+
 }
 
 @media only screen and (min-width: 931px) and (max-width: 1150px){
