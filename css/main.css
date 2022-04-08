@@ -465,7 +465,8 @@ main.section-1 #slide2 .vip-invition p{
     margin-bottom: 0;
 }
 main.section-1 #slide2 .vip-invition mark,
-main.section-1 #slide2 p.remind mark{
+main.section-1 #slide2 p.remind mark,
+main.section-1 #slide2 .methods mark{
     background: none;
 }
 main.section-1 #slide2 .methods{
@@ -847,7 +848,7 @@ footer#sole-footer .navigation .item a{
         margin-top: 3em;
     }
     main.section-1 #slide2 .cultural-coin .section-2 .frame img.money-icon{
-        top: 1em;
+        top: .5em;
     }
 
     button.to-top{
@@ -1376,8 +1377,12 @@ footer#sole-footer .navigation .item a{
 
     main.section-1 #slide2 .vip-invition mark,
     main.section-1 #slide2 p.remind mark,
-    main.section-1 #slide2 footer article mark{
+    main.section-1 #slide2 footer article mark,
+    main.section-1 #slide2 .methods mark{
         background: #fad3d6; padding: 0; 
+    }
+    main.section-1 #slide2 .methods mark{
+        line-height: 1.6; 
     }
 
 }
@@ -1629,7 +1634,7 @@ footer#sole-footer .navigation .item a{
         background: none;
     }
     main.section-1 #slide2 .cultural-coin .section-2 .frame p.main-content{
-        font-size: 15px; 
+        font-size: 14.5px; 
     }
     main.section-1 #slide2 .cultural-coin .section-2 .frame .remind p{
         font-size: 13px;
