@@ -1311,7 +1311,7 @@ footer#sole-footer .navigation .item a{
 
 }
 
-@media only screen and (min-width: 931px) and (max-width: 1350px){
+@media only screen and (min-width: 931px) and (max-width: 1250px){
     
     main.section-1 #slide2 .methods .step {
         width: 350px !important;
@@ -1319,6 +1319,27 @@ footer#sole-footer .navigation .item a{
     main.section-1 #slide2 .methods .step.large {
         width: 450px !important;
     }
+
+}
+
+@media only screen and (min-width: 1225px) and (max-width: 1365px){
+    
+    main.section-1 #slide2 .methods .step {
+        width: 200px !important;
+    }
+    main.section-1 #slide2 .methods .step.large {
+        width: 300px !important;
+    }
+    main.section-1 #slide2 .methods .step::after{
+        transform: translate(113px,-155px);
+    }
+    main.section-1 #slide2 .methods .step:nth-child(2)::after{
+        transform: translate(113px,-173px);
+    }
+    main.section-1 #slide2 .methods .step:nth-child(3):after {
+        transform: translate(113.5px,-187px);
+    }
+    
 
 }
 
@@ -1396,17 +1417,6 @@ footer#sole-footer .navigation .item a{
         font-size: 22px; 
     }
     
-}
-
-@media only screen and (min-width: 931px) and (max-width: 1350px){
-    
-    main.section-1 #slide2 .methods .step {
-        width: 350px !important;
-    }
-    main.section-1 #slide2 .methods .step.large {
-        width: 450px !important;
-    }
-
 }
 
 @media only screen and (min-width: 931px) and (max-width: 1150px){
