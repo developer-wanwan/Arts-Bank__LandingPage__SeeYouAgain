@@ -169,9 +169,6 @@ span.paragraph{
 .deep-purple{
     color: #6D3541;
 }
-mark{
-    color: #4C2A47;
-}
 
 .long-topic-circle{
     background: url(../img/arts_banks_title_long_bg.png) no-repeat; 
@@ -323,14 +320,10 @@ header .navbar-toggler.open .navbar-toggler-icon::after{
     transform: rotate(45deg);
 }
 
-header .navbar .nav-item{
-    background: #fad3d6;
-    height: 23.5px; 
-}
 header .navbar a.nav-link{
     font-size: 22px; font-weight: 500;
     letter-spacing: 1px; cursor: pointer;
-    position: relative; top: -5px;
+    position: relative; top: 5px;
     padding-top: 0; color: #6D3541;
 }
 header .navbar .nav-item:first-child a.nav-link{
@@ -383,7 +376,7 @@ main.section-1 #slide1 .contents{
 main.section-1 #slide1 .top-topic{
     position: absolute; top: 8.5em; 
     left: 0; right: 17em; text-align: center;
-    text-transform: uppercase;
+    text-transform: uppercase; font-weight: 900;
 }
 main.section-1 #slide1 .car{
     position: absolute;
@@ -458,17 +451,13 @@ main.section-1 #slide2 .contents{
     top: 6em;
 }
 main.section-1 #slide2 .vip-invition h2{
-    margin-bottom: 0.55em;
+    margin-bottom: 1em;
 }
 main.section-1 #slide2 .vip-invition p{
     line-height: 1.5;
     margin-bottom: 0;
 }
-main.section-1 #slide2 .vip-invition mark,
-main.section-1 #slide2 p.remind mark,
-main.section-1 #slide2 .methods mark{
-    background: none;
-}
+
 main.section-1 #slide2 .methods{
     margin-top: 4em;
 }
@@ -539,6 +528,8 @@ main.section-1 #slide2 .methods .step span.number{
     border-radius: 100%;
     position: absolute;
     transform: translate(-24px, -25px);
+    font-weight: 900;
+    font-style: italic;
 }
 main.section-1 #slide2 .methods .carousel-cell span.number{
     color: #FFF;
@@ -550,14 +541,16 @@ main.section-1 #slide2 .methods .carousel-cell span.number{
     margin-left: auto;
     margin-right: auto;
     left: 0; right: 0;
+    font-weight: 900;
+    font-style: italic;
 }
 main.section-1 #slide2 .methods .step span.number span,
 main.section-1 #slide2 .methods .carousel-cell span.number span{
-    position: relative; top: 3px;
+    position: relative; left: -2px; top: 2px;
 }
 main.section-1 #slide2 .methods .step:nth-child(3) span.number span,
 main.section-1 #slide2 .methods .carousel-cell:nth-child(3) span.number span{
-    left: 1px;
+    position: relative; left: -1px; top: 2.5px;
 }
 main.section-1 #slide2 .methods .step:nth-child(1) span.number,
 main.section-1 #slide2 .methods .step:nth-child(2) span.number,
@@ -652,9 +645,6 @@ main.section-1 #slide2 .cultural-coin .section-2 .frame .remind p{
     font-size: 18px; 
     line-height: 1.5;
 }
-main.section-1 #slide2 .cultural-coin .section-2 .frame mark{
-    background: #fad3d6; padding: 0; 
-}
 main.section-1 #slide2 .cultural-coin .section-2 .frame img.money-icon{
     width: 84px; position: relative; float: right;
     left: -4.7em; top: -3.75em;
@@ -665,13 +655,10 @@ main.section-1 #slide2 footer .reward{
 main.section-1 #slide2 footer article{
     margin-top: 5em;
 }
-main.section-1 #slide2 footer article mark,
-main.section-2 #slide2 footer article mark{
-    background: none;
-}
 main.section-1 #slide2 footer article p{
     line-height: .85;
     font-size: 28px;
+    font-weight: 500;
 }
 main.section-1 button.to-top{
     text-align: center;
@@ -693,7 +680,7 @@ main.section-2 #slide1{
 main.section-2 #slide1 .top-topic{
     position: absolute; top: 8.5em; 
     left: 0; right: 17em; text-align: center;
-    text-transform: uppercase;
+    text-transform: uppercase; font-weight: 900;
 }
 main.section-2 #slide1 .car{
     position: absolute;
@@ -756,7 +743,7 @@ main.section-2 .strength .school-info .amount{
     margin-bottom: 0em;
 }
 main.section-2 .strength .school-info .amount span{
-    font-size: 65px;
+    font-size: 65px; font-weight: 900;
 }
 main.section-2 .strength .school-info p.target{
     font-size: 25px;
@@ -796,7 +783,7 @@ main.section-2 #slide2 footer{
     margin-left: auto; margin-right: auto;
 }
 main.section-2 #slide2 footer h2{
-    position: relative; top: -2em;
+    position: relative; top: -1em;
 }
 main.section-2 #slide2 footer h2 .long-topic-circle span{
     left: 8.25px;
@@ -811,10 +798,7 @@ main.section-2 #slide2 footer article{
     width: 530px; margin-top: 2em;
 }
 main.section-2 #slide2 footer img{
-    float: right; margin-top: -3em;
-}
-main.section-2 #slide2 footer mark{
-    background: #fad3d6; padding: 0; 
+    float: right; 
 }
 
 main.section-2 button.to-top{
@@ -1395,13 +1379,7 @@ footer#sole-footer .navigation .item a{
         display: none;
     }
 
-    main.section-1 #slide2 .vip-invition mark,
-    main.section-1 #slide2 p.remind mark,
-    main.section-1 #slide2 footer article mark,
-    main.section-1 #slide2 .methods mark{
-        background: #fad3d6; padding: 0; 
-    }
-    main.section-1 #slide2 .methods mark{
+    main.section-1 #slide2 .methods{
         line-height: 1.6; 
     }
 
@@ -1639,9 +1617,6 @@ footer#sole-footer .navigation .item a{
     main.section-1 #slide2 .cultural-coin .section-1 .frame h2{
         font-size: 21px !important; top: -1px; letter-spacing: .5px;
     }
-    main.section-1 #slide2 .cultural-coin .section-2 .frame mark{
-        background: none;
-    }
     main.section-1 #slide2 .cultural-coin .section-2 .frame p.main-content{
         font-size: 14.5px; 
     }
@@ -1678,6 +1653,9 @@ footer#sole-footer .navigation .item a{
     }
     main.section-2 .origin-of-love .inside-contents article p{
         font-size: 15px;
+    }
+    main.section-2 #slide2 footer h2{
+        text-align: center;
     }
     main.section-2 #slide2 footer img{
         width: 304px; float: none;
