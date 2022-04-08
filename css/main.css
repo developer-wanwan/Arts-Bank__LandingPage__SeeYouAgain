@@ -458,7 +458,7 @@ main.section-1 #slide2 .contents{
     top: 6em;
 }
 main.section-1 #slide2 .vip-invition h2{
-    margin-bottom: 1.25em;
+    margin-bottom: 0.55em;
 }
 main.section-1 #slide2 .vip-invition p{
     line-height: 1.5;
@@ -578,8 +578,10 @@ main.section-1 #slide2 .methods .step:nth-child(3) .paragraphes{
 }
 
 main.section-1 #slide2 .remind{
-    margin-top: 30px;
     font-size: 18px;
+}
+main.section-1 #slide2 p.remind{
+    margin-top: 30px;
 }
 main.section-1 #slide2 .reward{
     width: 640px; margin: auto; margin-top: 27px; 
