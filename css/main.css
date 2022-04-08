@@ -515,12 +515,13 @@ main.section-1 #slide2 .methods .carousel-cell h3{
     margin-bottom: 20px;
 }
 main.section-1 #slide2 .methods .step .item,
+main.section-1 #slide2 .methods .step.large .item,
 main.section-1 #slide2 .methods .carousel-cell .item{
     margin-top: 3em;
 }
 main.section-1 #slide2 .methods .step .item p,
 main.section-1 #slide2 .methods .carousel-cell p{
-    line-height: .8;
+    line-height: 1;
 }
 main.section-1 #slide2 .methods .step.large a,
 main.section-1 #slide2 .methods .carousel-cell.large a{
