@@ -55,13 +55,12 @@
   overflow: hidden;
 }
 .marquee-content {
-  display: flex; margin-left: 40em;
+  display: flex; 
   -webkit-animation: marquee 35s linear infinite running;
   -moz-animation: marquee 35s linear infinite running;
   -o-animation: marquee 35s linear infinite running;
   -ms-animation: marquee 35s linear infinite running;
   animation: marquee 35s linear infinite running;
-  animation-delay: 1.35s;
 }
 .marquee-content:hover {
   -webkit-animation-play-state: paused;
