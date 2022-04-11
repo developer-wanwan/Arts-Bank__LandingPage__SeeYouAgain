@@ -151,6 +151,9 @@ p{
 span.paragraph{
     display: block;
 }
+span.inline{
+    display: block;
+}
 .deep-red{
     color: #DD4746;
 }
@@ -326,12 +329,9 @@ header .navbar a.nav-link{
     position: relative; top: 5px;
     padding-top: 0; color: #6D3541;
 }
-header .navbar .nav-item:first-child a.nav-link{
-    padding-right: 5em;
-    padding-left: 0;
-}
-header .navbar .nav-item:nth-child(2) a.nav-link{
-    padding-right: .4em;
+header .navbar .nav-item a.nav-link{
+    padding-right: 1.5em;
+    padding-left: 1.5em;
 }
 header .navbar a.nav-link.active{
     color: #4C2A47 !important;
@@ -718,7 +718,7 @@ main.section-2 #slide2{
     background-image: url('../img/arts_bank_wallpaper_2.2.jpg');
     background-repeat: repeat-x;
     background-size: cover;
-    height: 1980px;
+    height: 2100px;
 }
 main.section-2 .strength{
     margin-top: 6em;
@@ -779,7 +779,7 @@ main.section-2 .activity-memories{
 }
 
 main.section-2 #slide2 footer{
-    width: 1050px; margin-top: 19em; 
+    width: 1050px; margin-top: 14em; 
     margin-left: auto; margin-right: auto;
 }
 main.section-2 #slide2 footer h2{
@@ -1136,6 +1136,14 @@ footer#sole-footer .navigation .item a{
 
 }
 
+@media only screen and (max-width: 630px){
+
+    span.inline{
+        display: inline;
+    }
+
+}
+
 @media only screen and (max-width: 685px){
 
     main.section-1 #slide2 .carousel {
@@ -1381,6 +1389,15 @@ footer#sole-footer .navigation .item a{
 
     main.section-1 #slide2 .methods{
         line-height: 1.6; 
+    }
+
+}
+
+@media only screen and (min-width: 992px){
+
+    header .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0; 
+        padding-left: 0; 
     }
 
 }
