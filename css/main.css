@@ -1,74 +1,4 @@
-@font-face {
-    font-family: '';
-    src: url('./fonts/NotoSansHant-Black-Alphabetic.woff2') format('woff2'),
-        url('./fonts/NotoSansHant-Black-Alphabetic.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: '';
-    src: url('./fonts/NotoSansHant-Bold-Alphabetic.woff2') format('woff2'),
-        url('./fonts/NotoSansHant-Bold-Alphabetic.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: '';
-    src: url('./fonts/NotoSansHant-DemiLight-Alphabetic.woff2') format('woff2'),
-        url('./fonts/NotoSansHant-DemiLight-Alphabetic.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: '';
-    src: url('./fonts/NotoSansHant-Light-Alphabetic.woff2') format('woff2'),
-        url('./fonts/NotoSansHant-Light-Alphabetic.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: '';
-    src: url('./fonts/NotoSansHant-Medium-Alphabetic.woff2') format('woff2'),
-        url('./fonts/NotoSansHant-Medium-Alphabetic.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: '';
-    src: url('./fonts/NotoSansHant-Regular-Alphabetic.woff2') format('woff2'),
-        url('./fonts/NotoSansHant-Regular-Alphabetic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: '';
-    src: url('./fonts/NotoSansHant-Thin-Alphabetic.woff2') format('woff2'),
-        url('./fonts/NotoSansHant-Thin-Alphabetic.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gen Jyuu Gothic P';
-    src: url('./fonts/GenJyuuGothic-P-ExtraLight.woff2') format('woff2'),
-        url('./fonts/GenJyuuGothic-P-ExtraLight.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 @font-face {
     font-family: 'Gen Jyuu Gothic P';
@@ -84,33 +14,6 @@
     src: url('./fonts/GenJyuuGothic-P-Heavy.woff2') format('woff2'),
         url('./fonts/GenJyuuGothic-P-Heavy.woff') format('woff');
     font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gen Jyuu Gothic P';
-    src: url('./fonts/GenJyuuGothic-P-Light.woff2') format('woff2'),
-        url('./fonts/GenJyuuGothic-P-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gen Jyuu Gothic P Normal';
-    src: url('./fonts/GenJyuuGothic-P-Normal.woff2') format('woff2'),
-        url('./fonts/GenJyuuGothic-P-Normal.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gen Jyuu Gothic P';
-    src: url('./fonts/GenJyuuGothic-P-Medium.woff2') format('woff2'),
-        url('./fonts/GenJyuuGothic-P-Medium.woff') format('woff');
-    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -162,6 +65,9 @@ span.inline{
 }
 .light-red{
     color: #e75151;
+}
+.light-red-2{
+    color: #E64746;
 }
 .deep-pink{
     color: #E61779;
@@ -451,7 +357,14 @@ main.section-1 #slide2 .contents{
     top: 6em;
 }
 main.section-1 #slide2 .vip-invition h2{
-    margin-bottom: 1em;
+    margin-bottom: 1em; 
+}
+main.section-1 #slide2 .vip-invition h2::before{
+    content: url(../img/VIP_title.png);
+    width: 70%;
+}
+main.section-1 #slide2 .vip-invition h2 span{
+    letter-spacing: .5px;
 }
 main.section-1 #slide2 .vip-invition p{
     line-height: 1.5;
@@ -942,6 +855,14 @@ footer#sole-footer .navigation .item a{
 
 }
 
+@media only screen and (max-width: 623px){
+
+    .section-1 #slide2 h2 span.ready-block{
+        display: block;
+    }
+
+}
+
 @media only screen and (min-width: 501px) and (max-width: 550px){
    
     img.original-bird{
@@ -1140,6 +1061,9 @@ footer#sole-footer .navigation .item a{
 
     span.inline{
         display: inline;
+    }
+    main.section-1 #slide2 .vip-invition h2::before {
+        content: url(../img/VIP_title_mobile_255px.png) !important;
     }
 
 }
@@ -1378,6 +1302,7 @@ footer#sole-footer .navigation .item a{
     header .navbar .nav-item a.nav-link{
         width: 203px;
         text-align: center;
+        padding-left: 0; padding-right: 0;
     }
     header .navbar .nav-item:first-child a.nav-link {
         padding-right: 0;
@@ -1566,6 +1491,9 @@ footer#sole-footer .navigation .item a{
     main.section-1 #slide2 .vip-invition h2{
         line-height: 35px;
         margin-bottom: .75em;
+    }
+    main.section-1 #slide2 .vip-invition h2::before{
+        content: url(../img/VIP_title_mobile.png);
     }
     main.section-1 #slide2 .vip-invition p{
         font-size: 15px; display: inline;
